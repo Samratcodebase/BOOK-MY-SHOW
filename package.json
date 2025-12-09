@@ -1,0 +1,16 @@
+{
+  "name": "book-my-show",
+  "version": "1.0.0",
+  "description": "Its a Movie Booking Application",
+  "license": "ISC",
+  "author": "Samrat Roy",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1"
+  }
+}
