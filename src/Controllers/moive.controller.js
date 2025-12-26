@@ -6,7 +6,7 @@ import MovieService from "../Services/moive.services.js";
  * @returns Movie Created
  **/
 
-const CreateMovie = async (req, res) => {
+const CreateMovies = async (req, res) => {
   try {
     const movie = await MovieService.createMovie(req.body);
 
@@ -82,4 +82,16 @@ const getMovies = async (req, res) => {
 };
 const getMovieByID = async (req, res) => {};
 
+const updateMovie = async (req, res) => {
+  const { Id, data } = req.body;
+
+  if (!Id || !data) {
+    return res.status(405).json({
+      message: "All Fileds Required",
+      success: false,
+    });
+  }
+
+  const updatedMovie = await MovieService.updateMovie(Id, data);
+};
 export { CreateMovies, getMovies, deleteMovie };

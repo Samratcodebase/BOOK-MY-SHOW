@@ -1,3 +1,4 @@
+import Movie from "../Models/movie.model.js";
 const createMovie = async (data) => {
   const {
     movieName,
@@ -39,4 +40,13 @@ const createMovie = async (data) => {
   });
 };
 
-export default { createMovie };
+const updateMovie = async (movieID, data) => {
+  try {
+    const updatedMovie = await Movie.findByIdAndUpdate(movieID, data);
+    
+
+
+
+  } catch (error) {}
+};
+export default { createMovie, updateMovie };
