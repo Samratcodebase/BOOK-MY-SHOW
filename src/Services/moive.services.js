@@ -41,7 +41,6 @@ const createMovie = async (data) => {
   });
 };
 
-
 const updateMovie = async (movieID, data) => {
   if (!mongoose.Types.ObjectId.isValid(movieID)) {
     throw new Error("Invalid Movie ID");
@@ -65,14 +64,10 @@ const updateMovie = async (movieID, data) => {
     throw new Error("No valid fields to update");
   }
 
-  const updatedMovie = await Movie.findByIdAndUpdate(
-    movieID,
-    updatePayload,
-    {
-      new: true,           // return updated doc
-      runValidators: true, // enforce schema rules
-    }
-  );
+  const updatedMovie = await Movie.findByIdAndUpdate(movieID, updatePayload, {
+    new: true, // return updated doc
+    runValidators: true, // enforce schema rules
+  });
 
   if (!updatedMovie) {
     throw new Error("Movie not found");
@@ -80,5 +75,18 @@ const updateMovie = async (movieID, data) => {
 
   return updatedMovie;
 };
+const deleteMovieById = async (movieID) => {
+  if (!mongoose.Types.ObjectId.isValid(movieID)) {
+    throw new Error("Invalid Movie ID");
+  }
 
-export default { createMovie, updateMovie };
+  const deletedMovie = await Movie.findByIdAndDelete(movieID);
+
+  if (!deletedMovie) {
+    throw new Error("Movie not found");
+  }
+
+  return deletedMovie;
+};
+
+export default { createMovie, updateMovie, deleteMovieById };

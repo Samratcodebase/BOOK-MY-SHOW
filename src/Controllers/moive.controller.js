@@ -25,33 +25,31 @@ const CreateMovies = async (req, res) => {
 
 const deleteMovie = async (req, res) => {
   try {
-    const movieID = req.params.id;
+    const { id } = req.params;
 
-    if (!movieID) {
+    if (!id) {
       return res.status(400).json({
         success: false,
-        message: "Movie ID required",
+        message: "Movie ID is required",
       });
     }
 
-    const movie = await Movie.findByIdAndDelete({ _id: movieID });
-
-    if (!movie) {
-      return res.status(500).json({
-        success: false,
-        message: "Internal Server Error",
-      });
-    }
+    await MovieService.deleteMovieById(id);
 
     return res.status(200).json({
       success: true,
-      message: "Movie Deletion SucessFull",
+      message: "Movie deleted successfully",
     });
   } catch (error) {
-    return res.status(500).json({
+    const statusCode =
+      error.message === "Movie not found" ||
+      error.message === "Invalid Movie ID"
+        ? 404
+        : 500;
+
+    return res.status(statusCode).json({
       success: false,
-      message: "Internal Server Error",
-      error: error.message,
+      message: error.message,
     });
   }
 };
@@ -108,4 +106,4 @@ const updateMovie = async (req, res) => {
   }
 };
 
-export { CreateMovies, getMovies, deleteMovie };
+export { CreateMovies, getMovies, deleteMovie, updateMovie };
