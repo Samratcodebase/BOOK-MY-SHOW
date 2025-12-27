@@ -83,15 +83,29 @@ const getMovies = async (req, res) => {
 const getMovieByID = async (req, res) => {};
 
 const updateMovie = async (req, res) => {
-  const { Id, data } = req.body;
+  try {
+    const { id, data } = req.body;
 
-  if (!Id || !data) {
-    return res.status(405).json({
-      message: "All Fileds Required",
+    if (!id || !data) {
+      return res.status(400).json({
+        success: false,
+        message: "Movie ID and data are required",
+      });
+    }
+
+    const updatedMovie = await MovieService.updateMovie(id, data);
+
+    return res.status(200).json({
+      success: true,
+      message: "Movie updated successfully",
+      data: updatedMovie,
+    });
+  } catch (error) {
+    return res.status(500).json({
       success: false,
+      message: error.message,
     });
   }
-
-  const updatedMovie = await MovieService.updateMovie(Id, data);
 };
+
 export { CreateMovies, getMovies, deleteMovie };

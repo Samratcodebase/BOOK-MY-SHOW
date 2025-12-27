@@ -36,7 +36,7 @@ const movieSchema = new mongoose.Schema(
     releaseStatus: {
       type: String,
       required: true,
-      default: "RELESED",
+      default: "RELEASED",
     },
   },
   { timestamps: true }

@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import Movie from "../Models/movie.model.js";
 const createMovie = async (data) => {
   const {
@@ -40,13 +41,44 @@ const createMovie = async (data) => {
   });
 };
 
+
 const updateMovie = async (movieID, data) => {
-  try {
-    const updatedMovie = await Movie.findByIdAndUpdate(movieID, data);
-    
+  if (!mongoose.Types.ObjectId.isValid(movieID)) {
+    throw new Error("Invalid Movie ID");
+  }
 
+  const allowedFields = [
+    "movieName",
+    "description",
+    "casts",
+    "trailerUrl",
+    "language",
+    "releaseDate",
+    "director",
+  ];
 
+  const updatePayload = Object.fromEntries(
+    Object.entries(data).filter(([key]) => allowedFields.includes(key))
+  );
 
-  } catch (error) {}
+  if (Object.keys(updatePayload).length === 0) {
+    throw new Error("No valid fields to update");
+  }
+
+  const updatedMovie = await Movie.findByIdAndUpdate(
+    movieID,
+    updatePayload,
+    {
+      new: true,           // return updated doc
+      runValidators: true, // enforce schema rules
+    }
+  );
+
+  if (!updatedMovie) {
+    throw new Error("Movie not found");
+  }
+
+  return updatedMovie;
 };
+
 export default { createMovie, updateMovie };
