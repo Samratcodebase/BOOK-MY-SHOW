@@ -54,7 +54,7 @@ const deleteMovie = async (req, res) => {
   }
 };
 
-const getMovies = async (req, res) => {
+const MoviesByName = async (req, res) => {
   //GET /movies
   //GET /movies?movieName=avengers
   try {
@@ -109,4 +109,4 @@ const updateMovie = async (req, res) => {
   }
 };
 
-export { CreateMovies, getMovies, deleteMovie, updateMovie };
+export { CreateMovies, MoviesByName, deleteMovie, updateMovie };
