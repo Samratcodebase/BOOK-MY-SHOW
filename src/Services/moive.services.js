@@ -88,5 +88,13 @@ const deleteMovieById = async (movieID) => {
 
   return deletedMovie;
 };
+const getMoviesByName = async (movieName) => {
+  const filter = movieName
+    ? { movieName: { $regex: movieName, $options: "i" } }
+    : {};
 
-export default { createMovie, updateMovie, deleteMovieById };
+  const movies = await Movie.find(filter);
+
+  return movies;
+};
+export default { createMovie, updateMovie, deleteMovieById, getMoviesByName };
