@@ -18,4 +18,21 @@ const createTheatre = async (payload) => {
 
 const DeleteTheatre = async () => {};
 
-export default { createTheatre, DeleteTheatre };
+const FetchTheatre = async (name) => {
+  if (!name) {
+    return await Theatre.find({});
+  }
+
+  const theatre = await Theatre.findOne({
+    name: { $regex: `^${name}$`, $options: "i" },
+  });
+
+  if (!theatre) {
+    const error = new Error("Theatre not found");
+    error.statusCode = 404;
+    throw error;
+  }
+
+  return theatre;
+};
+export default { createTheatre, DeleteTheatre, FetchTheatre };

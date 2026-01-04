@@ -31,7 +31,6 @@ const createTheatre = async (req, res) => {
       sucess: true,
     });
   } catch (error) {
-    
     res.status(500).json({
       message: error.message,
       sucess: true,
@@ -39,4 +38,22 @@ const createTheatre = async (req, res) => {
   }
 };
 
-export { createTheatre };
+const getTheatres = async (req, res) => {
+  try {
+    const { name } = req.params;
+
+    const data = await theatreService.FetchTheatre(name);
+
+    return res.status(200).json({
+      success: true,
+      data,
+    });
+  } catch (error) {
+    return res.status(error.statusCode || 500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+export { createTheatre, getTheatres };

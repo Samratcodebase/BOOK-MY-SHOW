@@ -8,7 +8,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "Dev": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
