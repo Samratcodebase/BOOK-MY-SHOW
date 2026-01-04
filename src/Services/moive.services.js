@@ -1,5 +1,9 @@
 import mongoose from "mongoose";
 import Movie from "../Models/movie.model.js";
+/**
+ * @param req :Object Contaning details about the new Movie that to be Created
+ * @param res :Retuns the  New Moive Document
+ **/
 const createMovie = async (data) => {
   const {
     movieName,
@@ -75,6 +79,11 @@ const updateMovie = async (movieID, data) => {
 
   return updatedMovie;
 };
+
+/**
+ *  @param moiveID : ID which will be used to indentify the moive to be deleted
+ *  @returns : The Deleted Object
+ * **/
 const deleteMovieById = async (movieID) => {
   if (!mongoose.Types.ObjectId.isValid(movieID)) {
     throw new Error("Invalid Movie ID");

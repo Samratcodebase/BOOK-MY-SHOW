@@ -34,11 +34,12 @@ const deleteMovie = async (req, res) => {
       });
     }
 
-    await MovieService.deleteMovieById(id);
+    const deletedMoive = await MovieService.deleteMovieById(id);
 
     return res.status(200).json({
       success: true,
       message: "Movie deleted successfully",
+      Data: deletedMoive,
     });
   } catch (error) {
     const statusCode =
