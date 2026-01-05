@@ -56,4 +56,28 @@ const getTheatres = async (req, res) => {
   }
 };
 
-export { createTheatre, getTheatres };
+const deleteTheatres = async (req, res) => {
+  try {
+    const theatreID = req.params.id;
+    if (!theatreID) {
+      return res.status(400).json({
+        message: "Required parameters are missing",
+        sucess: false,
+      });
+    }
+
+    const removedTheatre = await theatreService.DeleteTheatre(theatreID);
+
+    return res.status(200).json({
+      message: "Theatre Deleted  SucessFull",
+      success: true,
+      data: removedTheatre,
+    });
+  } catch (error) {
+    return res.status(error.statusCode).json({
+      message: error.message,
+      success: false,
+    });
+  }
+};
+export { createTheatre, getTheatres, deleteTheatres };
