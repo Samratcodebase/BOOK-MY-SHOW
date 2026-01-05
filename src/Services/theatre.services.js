@@ -1,5 +1,5 @@
 import Theatre from "../Models/theatre.model.js";
-
+import mongoose from "mongoose";
 const createTheatre = async (payload) => {
   const { name, description, city, pincode, address } = payload;
 
@@ -16,7 +16,21 @@ const createTheatre = async (payload) => {
   return theatre;
 };
 
-const DeleteTheatre = async () => {};
+const DeleteTheatre = async (theatreID) => {
+  if (!mongoose.Types.ObjectId.isValid(theatreID)) {
+    throw new Error("Invalid Theatre ID");
+  }
+
+  const deletedTheatre = await Theatre.findByIdAndDelete(theatreID);
+
+  if (!deletedTheatre) {
+    const error = new Error("Internal Service Error");
+    error.statusCode = 500;
+    throw error;
+  }
+
+  return deletedTheatre;
+};
 
 const FetchTheatre = async (name) => {
   if (!name) {
