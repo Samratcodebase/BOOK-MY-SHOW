@@ -60,10 +60,10 @@ const deleteTheatres = async (req, res) => {
   try {
     const theatreID = req.params.id;
     if (!theatreID) {
-      return res.status(400).json({
-        message: "Required parameters are missing",
-        sucess: false,
-      });
+      const error = new Error("Required parameters are missing");
+      error.statusCode = 400;
+
+      throw error;
     }
 
     const removedTheatre = await theatreService.DeleteTheatre(theatreID);
