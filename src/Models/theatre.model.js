@@ -16,6 +16,7 @@ const theatreSchema = new mongoose.Schema(
       required: true,
     },
     address: String,
+    movies:[{type.}]
   },
   { timestamps: true }
 );
