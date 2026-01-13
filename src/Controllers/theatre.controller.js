@@ -80,4 +80,32 @@ const deleteTheatres = async (req, res) => {
     });
   }
 };
-export { createTheatre, getTheatres, deleteTheatres };
+
+const theatreMoviesController = async (req, res) => {
+  try {
+    const theatreID = req.params.id;
+    console.log(theatreID);
+
+    if (!theatreID) {
+      const error = new Error("Theatre ID is Missing");
+      error.statusCode = 401;
+      error.sucess = false;
+      throw error;
+    }
+
+    const { movies } = req.body;
+    console.log(movies);
+
+    const UpdatedTheatre = await theatreService.TheatreMoviesService(
+      theatreID,
+      movies
+    );
+
+    res.status(200).json(UpdatedTheatre);
+  } catch (error) {
+    return res.status(error.statusCode).json({
+      error,
+    });
+  }
+};
+export { createTheatre, getTheatres, deleteTheatres, theatreMoviesController };
