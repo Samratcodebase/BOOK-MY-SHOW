@@ -49,7 +49,13 @@ const FetchTheatre = async (name) => {
 
   return theatre;
 };
-
+/**
+ *
+ * @param  theatreID -->unique id of the theatre for which we want to update movies
+ * @param  movies -->array of movieID  that are exprected to be updated in  theatre
+ * @param  flag -->boolean that tells whether we want to insert movies or remove them
+ * @returns --> updated theatre Document
+ */
 const TheatreMoviesService = async (theatreID, movies, flag) => {
   let theatre = await Theatre.findOne({ _id: theatreID });
 
