@@ -50,23 +50,34 @@ const FetchTheatre = async (name) => {
   return theatre;
 };
 
-const TheatreMoviesService = async (theatreID, movies) => {
+const TheatreMoviesService = async (theatreID, movies, flag) => {
   let theatre = await Theatre.findOne({ _id: theatreID });
-  console.log("Whyyyyyyyyyyyyyyy");
 
   if (!theatre) {
     throw new Error("Internal Server Error");
   }
 
-  theatre = await Theatre.findByIdAndUpdate(
-    theatreID,
-    {
-      $addToSet: {
-        movies: { $each: movies },
+  if (!flag) {
+    theatre = await Theatre.findByIdAndUpdate(
+      theatreID,
+      {
+        $pull: {
+          movies: { $in: movies },
+        },
       },
-    },
-    { new: true }
-  );
+      { new: true }
+    );
+  } else {
+    theatre = await Theatre.findByIdAndUpdate(
+      theatreID,
+      {
+        $addToSet: {
+          movies: { $each: movies },
+        },
+      },
+      { new: true }
+    );
+  }
 
   if (!theatre) {
     throw new Error("Internal Server Error");

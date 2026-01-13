@@ -93,12 +93,14 @@ const theatreMoviesController = async (req, res) => {
       throw error;
     }
 
-    const { movies } = req.body;
+    const { movies, flag } = req.body;
     console.log(movies);
+    console.log(flag);
 
     const UpdatedTheatre = await theatreService.TheatreMoviesService(
       theatreID,
-      movies
+      movies,
+      flag
     );
 
     res.status(200).json(UpdatedTheatre);
