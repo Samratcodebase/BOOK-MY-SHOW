@@ -49,4 +49,33 @@ const FetchTheatre = async (name) => {
 
   return theatre;
 };
-export default { createTheatre, DeleteTheatre, FetchTheatre };
+
+const TheatreMoviesService = async (theatreID, movies) => {
+  let theatre = await Theatre.findOne({ _id: theatreID });
+  console.log("Whyyyyyyyyyyyyyyy");
+
+  if (!theatre) {
+    throw new Error("Internal Server Error");
+  }
+
+  theatre = await Theatre.findByIdAndUpdate(
+    theatreID,
+    {
+      $addToSet: {
+        movies: { $each: movies },
+      },
+    },
+    { new: true }
+  );
+
+  if (!theatre) {
+    throw new Error("Internal Server Error");
+  }
+  return theatre;
+};
+export default {
+  createTheatre,
+  DeleteTheatre,
+  FetchTheatre,
+  TheatreMoviesService,
+};
