@@ -53,17 +53,17 @@ const FetchTheatre = async (name) => {
  *
  * @param  theatreID -->unique id of the theatre for which we want to update movies
  * @param  movies -->array of movieID  that are exprected to be updated in  theatre
- * @param  flag -->boolean that tells whether we want to insert movies or remove them
+ * @param  insert -->boolean that tells whether we want to insert movies or remove them
  * @returns --> updated theatre Document
  */
-const TheatreMoviesService = async (theatreID, movies, flag) => {
+const TheatreMoviesService = async (theatreID, movies, insert) => {
   let theatre = await Theatre.findOne({ _id: theatreID });
 
   if (!theatre) {
     throw new Error("Internal Server Error");
   }
 
-  if (!flag) {
+  if (!insert) {
     theatre = await Theatre.findByIdAndUpdate(
       theatreID,
       {
@@ -88,6 +88,7 @@ const TheatreMoviesService = async (theatreID, movies, flag) => {
   if (!theatre) {
     throw new Error("Internal Server Error");
   }
+  theatre = await theatre.populate("movies");
   return theatre;
 };
 export default {
