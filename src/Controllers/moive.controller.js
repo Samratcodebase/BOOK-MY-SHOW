@@ -63,12 +63,7 @@ const MoviesByName = async (req, res) => {
 
     const movies = await MovieService.getMoviesByName(movieName);
 
-    if (movies.length === 0) {
-      return res.status(404).json({
-        success: false,
-        message: "No matching movies found",
-      });
-    }
+
 
     return res.status(200).json({
       success: true,
@@ -76,10 +71,9 @@ const MoviesByName = async (req, res) => {
       data: movies,
     });
   } catch (error) {
-    return res.status(500).json({
-      success: false,
-      message: "Internal Server Error",
-      Error: error.message,
+    return res.status(error.statusCode).json({
+      success: error.success,
+      message: error.message,
     });
   }
 };

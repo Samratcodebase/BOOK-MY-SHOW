@@ -1,5 +1,5 @@
 import theatreService from "../Services/theatre.services.js";
-
+import moiveServices from "../Services/moive.services.js";
 const createTheatre = async (req, res) => {
   try {
     const { name, description, city, pincode, address } = req.body;
@@ -40,9 +40,10 @@ const createTheatre = async (req, res) => {
 
 const getTheatres = async (req, res) => {
   try {
+    let movieID = null;
     let query = {};
     const { name, city, pincode } = req.query;
-
+    let movie = req.query.movie;
     if (name) {
       query.name = name;
     }
@@ -52,8 +53,19 @@ const getTheatres = async (req, res) => {
     if (pincode) {
       query.pincode = pincode;
     }
+    if (movie) {
+      movie = await moiveServices.getMoviesByName(movie);
+      if (!movie) {
+        return res.status(404).json({
+          success: false,
+          message: "Movie not found",
+        });
+      }
 
-    const data = await theatreService.FetchTheatre(query);
+      movieID = movie[0]._id;
+    }
+
+    const data = await theatreService.FetchTheatre(query, movieID);
 
     return res.status(200).json({
       success: true,

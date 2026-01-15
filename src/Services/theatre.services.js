@@ -1,4 +1,5 @@
 import Theatre from "../Models/theatre.model.js";
+
 import mongoose from "mongoose";
 const createTheatre = async (payload) => {
   const { name, description, city, pincode, address } = payload;
@@ -32,16 +33,43 @@ const DeleteTheatre = async (theatreID) => {
   return deletedTheatre;
 };
 
-const FetchTheatre = async (query) => {
-  const theatre = await Theatre.find(query).populate("movies");
+const FetchTheatre = async (query, movieID = null) => {
+  const theatres = await Theatre.find(query).populate("movies");
 
-  if (!theatre) {
+  //theatres.lenght is 0 if Empty array  So !theatre.length ==true
+  if (!theatres.length) {
     const error = new Error("Theatre not found");
     error.statusCode = 404;
     throw error;
   }
-  return theatre;
+
+  if (!movieID) {
+    return theatres;
+  }
+
+  if (movieID) {
+    // Filter theatres to only include the movie matching movieID
+    const filteredTheatres = theatres
+      .map((theatre) => {
+        const matchingMovies = theatre.movies.filter((movie) =>
+          movie._id.equals(movieID)
+        );
+
+        if (matchingMovies.length > 0) {
+          return {
+            ...theatre.toObject(), // convert Mongoose document to plain object
+            movies: matchingMovies,
+          };
+        }
+
+        return null; 
+      })
+      .filter(Boolean);
+
+    return filteredTheatres;
+  }
 };
+
 /**
  *
  * @param  theatreID -->unique id of the theatre for which we want to update movies
