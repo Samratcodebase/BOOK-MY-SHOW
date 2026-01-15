@@ -1,0 +1,1293 @@
+[
+  {
+    "movieName": "Jawan",
+    "description": "A man driven by a personal vendetta sets out to correct societal wrongs.",
+    "casts": [
+      "Shah Rukh Khan",
+      "Nayanthara",
+      "Vijay Sethupathi"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=COv52Qyctws",
+    "language": "Hindi",
+    "releaseDate": "2023-09-07",
+    "director": "Atlee",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Inception",
+    "description": "A skilled thief enters the dreams of others to steal secrets and plant ideas.",
+    "casts": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Elliot Page",
+      "Tom Hardy"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=YoHD9XEInc0",
+    "language": "English",
+    "releaseDate": "2010-07-16",
+    "director": "Christopher Nolan",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Interstellar",
+    "description": "A team of explorers travel through a wormhole in space to ensure humanity’s survival.",
+    "casts": [
+      "Matthew McConaughey",
+      "Anne Hathaway",
+      "Jessica Chastain",
+      "Michael Caine"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=zSWdZVtXT7E",
+    "language": "English",
+    "releaseDate": "2014-11-07",
+    "director": "Christopher Nolan",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "The Dark Knight",
+    "description": "Batman faces the Joker, a criminal mastermind spreading chaos across Gotham.",
+    "casts": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart",
+      "Gary Oldman"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=EXeTwQWrcwY",
+    "language": "English",
+    "releaseDate": "2008-07-18",
+    "director": "Christopher Nolan",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Avatar",
+    "description": "A paraplegic Marine is sent to Pandora and becomes torn between duty and protecting the alien world.",
+    "casts": [
+      "Sam Worthington",
+      "Zoe Saldana",
+      "Sigourney Weaver",
+      "Stephen Lang"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=5PSNL1qE6VY",
+    "language": "English",
+    "releaseDate": "2009-12-18",
+    "director": "James Cameron",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Avengers: Endgame",
+    "description": "The Avengers assemble one final time to reverse Thanos’ actions and restore balance.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Scarlett Johansson",
+      "Chris Hemsworth"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+    "language": "English",
+    "releaseDate": "2019-04-26",
+    "director": "Anthony Russo, Joe Russo",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Dune: Part One",
+    "description": "Paul Atreides journeys to the most dangerous planet in the universe to secure his family’s future.",
+    "casts": [
+      "Timothée Chalamet",
+      "Zendaya",
+      "Rebecca Ferguson",
+      "Oscar Isaac"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=n9xhJrPXop4",
+    "language": "English",
+    "releaseDate": "2021-10-22",
+    "director": "Denis Villeneuve",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Tenet",
+    "description": "A secret agent manipulates time to prevent World War III.",
+    "casts": [
+      "John David Washington",
+      "Robert Pattinson",
+      "Elizabeth Debicki",
+      "Kenneth Branagh"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=LdOM0x0XDMo",
+    "language": "English",
+    "releaseDate": "2020-08-26",
+    "director": "Christopher Nolan",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Joker",
+    "description": "A mentally troubled comedian descends into madness and becomes Gotham’s infamous villain.",
+    "casts": [
+      "Joaquin Phoenix",
+      "Robert De Niro",
+      "Zazie Beetz"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=zAGVQLHvwOY",
+    "language": "English",
+    "releaseDate": "2019-10-04",
+    "director": "Todd Phillips",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "The Matrix",
+    "description": "A hacker discovers reality is a simulation and joins a rebellion against machines.",
+    "casts": [
+      "Keanu Reeves",
+      "Laurence Fishburne",
+      "Carrie-Anne Moss"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=vKQi3bBA1y8",
+    "language": "English",
+    "releaseDate": "1999-03-31",
+    "director": "The Wachowskis",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Oppenheimer",
+    "description": "The story of J. Robert Oppenheimer and the development of the atomic bomb.",
+    "casts": [
+      "Cillian Murphy",
+      "Emily Blunt",
+      "Matt Damon",
+      "Robert Downey Jr."
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=uYPbbksJxIg",
+    "language": "English",
+    "releaseDate": "2023-07-21",
+    "director": "Christopher Nolan",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Parasite",
+    "description": "A poor family schemes to infiltrate a wealthy household with unexpected consequences.",
+    "casts": [
+      "Song Kang-ho",
+      "Lee Sun-kyun",
+      "Cho Yeo-jeong",
+      "Park So-dam"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=SEUXfv87Wpk",
+    "language": "Korean",
+    "releaseDate": "2019-05-30",
+    "director": "Bong Joon-ho",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "RRR",
+    "description": "A fictional story about two legendary revolutionaries and their journey.",
+    "casts": [
+      "N. T. Rama Rao Jr.",
+      "Ram Charan",
+      "Alia Bhatt",
+      "Ajay Devgn"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=NgBoMJy386M",
+    "language": "Telugu",
+    "releaseDate": "2022-03-25",
+    "director": "S. S. Rajamouli",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "KGF: Chapter 2",
+    "description": "Rocky consolidates his power while facing new enemies and political challenges.",
+    "casts": [
+      "Yash",
+      "Sanjay Dutt",
+      "Raveena Tandon",
+      "Srinidhi Shetty"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=JKa05nyUmuQ",
+    "language": "Kannada",
+    "releaseDate": "2022-04-14",
+    "director": "Prashanth Neel",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Pushpa: The Rise",
+    "description": "A labourer rises through the ranks of a red sandalwood smuggling syndicate.",
+    "casts": [
+      "Allu Arjun",
+      "Fahadh Faasil",
+      "Rashmika Mandanna"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=Q1NKMPhP8PY",
+    "language": "Telugu",
+    "releaseDate": "2021-12-17",
+    "director": "Sukumar",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Vikram",
+    "description": "A special agent investigates a series of murders linked to a drug syndicate.",
+    "casts": [
+      "Kamal Haasan",
+      "Vijay Sethupathi",
+      "Fahadh Faasil"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=OKBMCL-frPU",
+    "language": "Tamil",
+    "releaseDate": "2022-06-03",
+    "director": "Lokesh Kanagaraj",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Pathaan",
+    "description": "An Indian spy takes on a ruthless mercenary planning a massive attack.",
+    "casts": [
+      "Shah Rukh Khan",
+      "Deepika Padukone",
+      "John Abraham"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=vqu4z34wENw",
+    "language": "Hindi",
+    "releaseDate": "2023-01-25",
+    "director": "Siddharth Anand",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "John Wick",
+    "description": "A retired hitman seeks vengeance after a personal tragedy.",
+    "casts": [
+      "Keanu Reeves",
+      "Michael Nyqvist",
+      "Alfie Allen"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=C0BMx-qxsP4",
+    "language": "English",
+    "releaseDate": "2014-10-24",
+    "director": "Chad Stahelski",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Mad Max: Fury Road",
+    "description": "In a post-apocalyptic wasteland, a woman rebels against a tyrant ruler.",
+    "casts": [
+      "Tom Hardy",
+      "Charlize Theron",
+      "Nicholas Hoult"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=hEJnMQG9ev8",
+    "language": "English",
+    "releaseDate": "2015-05-15",
+    "director": "George Miller",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Gladiator",
+    "description": "A former Roman General seeks revenge against the corrupt emperor.",
+    "casts": [
+      "Russell Crowe",
+      "Joaquin Phoenix",
+      "Connie Nielsen"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=owK1qxDselE",
+    "language": "English",
+    "releaseDate": "2000-05-05",
+    "director": "Ridley Scott",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "3 Idiots",
+    "description": "Three friends navigate college life while challenging societal expectations.",
+    "casts": [
+      "Aamir Khan",
+      "R. Madhavan",
+      "Sharman Joshi",
+      "Kareena Kapoor"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=K0eDlFX9GMc",
+    "language": "Hindi",
+    "releaseDate": "2009-12-25",
+    "director": "Rajkumar Hirani",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Dangal",
+    "description": "A former wrestler trains his daughters to become world-class wrestlers.",
+    "casts": [
+      "Aamir Khan",
+      "Fatima Sana Shaikh",
+      "Sanya Malhotra"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=x_7YlGv9u1g",
+    "language": "Hindi",
+    "releaseDate": "2016-12-23",
+    "director": "Nitesh Tiwari",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "PK",
+    "description": "An alien questions blind faith and social norms after landing on Earth.",
+    "casts": [
+      "Aamir Khan",
+      "Anushka Sharma",
+      "Sushant Singh Rajput"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=SOXWc32k4zA",
+    "language": "Hindi",
+    "releaseDate": "2014-12-19",
+    "director": "Rajkumar Hirani",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Bajrangi Bhaijaan",
+    "description": "A man embarks on a journey to reunite a mute girl with her family.",
+    "casts": [
+      "Salman Khan",
+      "Harshaali Malhotra",
+      "Kareena Kapoor"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=vyX4toD395U",
+    "language": "Hindi",
+    "releaseDate": "2015-07-17",
+    "director": "Kabir Khan",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Lagaan",
+    "description": "Villagers challenge British officers to a cricket match to avoid taxes.",
+    "casts": [
+      "Aamir Khan",
+      "Gracy Singh"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=5dQ6S8WmGxY",
+    "language": "Hindi",
+    "releaseDate": "2001-06-15",
+    "director": "Ashutosh Gowariker",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Andhadhun",
+    "description": "A blind pianist gets caught in a web of murder and deception.",
+    "casts": [
+      "Ayushmann Khurrana",
+      "Tabu",
+      "Radhika Apte"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=2iVYI99VGaw",
+    "language": "Hindi",
+    "releaseDate": "2018-10-05",
+    "director": "Sriram Raghavan",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Drishyam",
+    "description": "A man goes to extreme lengths to protect his family after an unexpected crime.",
+    "casts": [
+      "Ajay Devgn",
+      "Tabu",
+      "Shriya Saran"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=AuuX2j14NBg",
+    "language": "Hindi",
+    "releaseDate": "2015-07-31",
+    "director": "Nishikant Kamat",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Gangs of Wasseypur",
+    "description": "A multi-generational saga of crime and revenge.",
+    "casts": [
+      "Manoj Bajpayee",
+      "Nawazuddin Siddiqui"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=j-AkWDkXcMY",
+    "language": "Hindi",
+    "releaseDate": "2012-06-22",
+    "director": "Anurag Kashyap",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Queen",
+    "description": "A woman discovers independence after her honeymoon trip alone.",
+    "casts": [
+      "Kangana Ranaut",
+      "Rajkummar Rao"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=KGC6vl3lzf0",
+    "language": "Hindi",
+    "releaseDate": "2014-03-07",
+    "director": "Vikas Bahl",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Swades",
+    "description": "An NRI returns to India to reconnect with his roots.",
+    "casts": [
+      "Shah Rukh Khan",
+      "Gayatri Joshi"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=daY8xZ8k6jI",
+    "language": "Hindi",
+    "releaseDate": "2004-12-17",
+    "director": "Ashutosh Gowariker",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Chak De! India",
+    "description": "A disgraced hockey player coaches the Indian women's national team to glory.",
+    "casts": [
+      "Shah Rukh Khan",
+      "Vidya Malvade",
+      "Sagarika Ghatge"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=6a0-dSMWm5g",
+    "language": "Hindi",
+    "releaseDate": "2007-08-10",
+    "director": "Shimit Amin",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Taare Zameen Par",
+    "description": "A teacher helps a dyslexic child discover his true potential.",
+    "casts": [
+      "Darsheel Safary",
+      "Aamir Khan"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=tn_2Ie_jtX8",
+    "language": "Hindi",
+    "releaseDate": "2007-12-21",
+    "director": "Aamir Khan",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Barfi!",
+    "description": "A deaf and mute man finds love in unexpected ways.",
+    "casts": [
+      "Ranbir Kapoor",
+      "Priyanka Chopra",
+      "Ileana D'Cruz"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=2m5nW9kz7h0",
+    "language": "Hindi",
+    "releaseDate": "2012-09-14",
+    "director": "Anurag Basu",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Zindagi Na Milegi Dobara",
+    "description": "Three friends rediscover life during a road trip across Spain.",
+    "casts": [
+      "Hrithik Roshan",
+      "Farhan Akhtar",
+      "Abhay Deol",
+      "Katrina Kaif"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=FJrpcDgC3zU",
+    "language": "Hindi",
+    "releaseDate": "2011-07-15",
+    "director": "Zoya Akhtar",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Dil Chahta Hai",
+    "description": "Three inseparable friends experience love, loss, and friendship.",
+    "casts": [
+      "Aamir Khan",
+      "Saif Ali Khan",
+      "Akshaye Khanna"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=m13b25V0X5g",
+    "language": "Hindi",
+    "releaseDate": "2001-08-10",
+    "director": "Farhan Akhtar",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Black",
+    "description": "A teacher helps a blind and deaf girl learn to communicate.",
+    "casts": [
+      "Amitabh Bachchan",
+      "Rani Mukerji"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=HF6IfPp9g1E",
+    "language": "Hindi",
+    "releaseDate": "2005-02-04",
+    "director": "Sanjay Leela Bhansali",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Munna Bhai M.B.B.S.",
+    "description": "A gangster enrolls in medical college to fulfill his father’s dream.",
+    "casts": [
+      "Sanjay Dutt",
+      "Arshad Warsi",
+      "Gracy Singh"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=6lCGvu-hwX4",
+    "language": "Hindi",
+    "releaseDate": "2003-12-19",
+    "director": "Rajkumar Hirani",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Rang De Basanti",
+    "description": "A group of friends become revolutionaries after a tragic incident.",
+    "casts": [
+      "Aamir Khan",
+      "Siddharth",
+      "Soha Ali Khan"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=O9tFXH0S5cY",
+    "language": "Hindi",
+    "releaseDate": "2006-01-26",
+    "director": "Rakeysh Omprakash Mehra",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Kabir Singh",
+    "description": "A brilliant surgeon spirals into self-destruction after heartbreak.",
+    "casts": [
+      "Shahid Kapoor",
+      "Kiara Advani"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=RiANSSgCuJk",
+    "language": "Hindi",
+    "releaseDate": "2019-06-21",
+    "director": "Sandeep Reddy Vanga",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Article 15",
+    "description": "A police officer confronts caste-based discrimination in rural India.",
+    "casts": [
+      "Ayushmann Khurrana",
+      "Isha Talwar"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=HKOJY0cU63E",
+    "language": "Hindi",
+    "releaseDate": "2019-06-28",
+    "director": "Anubhav Sinha",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Udaan",
+    "description": "A teenager escapes an abusive father to follow his dreams.",
+    "casts": [
+      "Rajat Barmecha",
+      "Ronit Roy"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=UHKZ9zXv4pE",
+    "language": "Hindi",
+    "releaseDate": "2010-07-16",
+    "director": "Vikramaditya Motwane",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Haider",
+    "description": "A modern adaptation of Hamlet set in conflict-ridden Kashmir.",
+    "casts": [
+      "Shahid Kapoor",
+      "Tabu",
+      "Shraddha Kapoor"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=ZmN_VSo8DOo",
+    "language": "Hindi",
+    "releaseDate": "2014-10-02",
+    "director": "Vishal Bhardwaj",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Paan Singh Tomar",
+    "description": "The true story of an athlete who becomes a dreaded dacoit.",
+    "casts": [
+      "Irrfan Khan"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=G6cZpZ7zY6M",
+    "language": "Hindi",
+    "releaseDate": "2012-03-02",
+    "director": "Tigmanshu Dhulia",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Masaan",
+    "description": "Lives intertwine along the Ganges after tragedy and loss.",
+    "casts": [
+      "Vicky Kaushal",
+      "Richa Chadda",
+      "Sanjay Mishra"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=SKJfBo3xMW0",
+    "language": "Hindi",
+    "releaseDate": "2015-07-24",
+    "director": "Neeraj Ghaywan",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Newton",
+    "description": "A government clerk tries to conduct free and fair elections in a conflict zone.",
+    "casts": [
+      "Rajkummar Rao",
+      "Pankaj Tripathi"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=Hc7E4kC6sMU",
+    "language": "Hindi",
+    "releaseDate": "2017-09-22",
+    "director": "Amit Masurkar",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Tumbbad",
+    "description": "A man’s obsession with a mythical treasure leads to horror and greed.",
+    "casts": [
+      "Sohum Shah"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=sN75MPxgvX8",
+    "language": "Hindi",
+    "releaseDate": "2018-10-12",
+    "director": "Rahi Anil Barve",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Badhaai Ho",
+    "description": "A man struggles to cope when his middle-aged parents announce a pregnancy.",
+    "casts": [
+      "Ayushmann Khurrana",
+      "Neena Gupta"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=UNy0Vv3j6kY",
+    "language": "Hindi",
+    "releaseDate": "2018-10-19",
+    "director": "Amit Sharma",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Hindi Medium",
+    "description": "Parents go to extreme lengths to secure English-medium education for their child.",
+    "casts": [
+      "Irrfan Khan",
+      "Saba Qamar"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=GjkFr48jk68",
+    "language": "Hindi",
+    "releaseDate": "2017-05-19",
+    "director": "Saket Chaudhary",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Rocket Singh: Salesman of the Year",
+    "description": "An honest salesman builds his own ethical business.",
+    "casts": [
+      "Ranbir Kapoor",
+      "Prem Chopra"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=6K5VZLkO7sY",
+    "language": "Hindi",
+    "releaseDate": "2009-12-11",
+    "director": "Shimit Amin",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Iron Man",
+    "description": "A billionaire industrialist builds a high-tech suit to escape captivity and becomes a hero.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Gwyneth Paltrow",
+      "Jeff Bridges"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=8ugaeA-nMTc",
+    "language": "English",
+    "releaseDate": "2008-05-02",
+    "director": "Jon Favreau",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "The Incredible Hulk",
+    "description": "Bruce Banner searches for a cure while evading the military.",
+    "casts": [
+      "Edward Norton",
+      "Liv Tyler",
+      "Tim Roth"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=xbqNb2PFKKA",
+    "language": "English",
+    "releaseDate": "2008-06-13",
+    "director": "Louis Leterrier",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Iron Man 2",
+    "description": "Tony Stark faces new threats while struggling with his legacy.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Scarlett Johansson",
+      "Mickey Rourke"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=BoohRoVA9WQ",
+    "language": "English",
+    "releaseDate": "2010-05-07",
+    "director": "Jon Favreau",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Thor",
+    "description": "The Norse god Thor is cast out of Asgard to learn humility.",
+    "casts": [
+      "Chris Hemsworth",
+      "Natalie Portman",
+      "Tom Hiddleston"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=JOddp-nlNvQ",
+    "language": "English",
+    "releaseDate": "2011-05-06",
+    "director": "Kenneth Branagh",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Captain America: The First Avenger",
+    "description": "Steve Rogers becomes a super soldier during World War II.",
+    "casts": [
+      "Chris Evans",
+      "Hayley Atwell",
+      "Sebastian Stan"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=JerVrbLldXw",
+    "language": "English",
+    "releaseDate": "2011-07-22",
+    "director": "Joe Johnston",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "The Avengers",
+    "description": "Earth’s mightiest heroes unite to stop Loki.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Scarlett Johansson"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=eOrNdBpGMv8",
+    "language": "English",
+    "releaseDate": "2012-05-04",
+    "director": "Joss Whedon",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Avengers: Age of Ultron",
+    "description": "The Avengers battle Ultron, an AI bent on human extinction.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Chris Hemsworth",
+      "Elizabeth Olsen"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=tmeOjFno6Do",
+    "language": "English",
+    "releaseDate": "2015-05-01",
+    "director": "Joss Whedon",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Captain America: Civil War",
+    "description": "The Avengers split over government control.",
+    "casts": [
+      "Chris Evans",
+      "Robert Downey Jr.",
+      "Tom Holland"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=dKrVegVI0Us",
+    "language": "English",
+    "releaseDate": "2016-05-06",
+    "director": "Anthony Russo, Joe Russo",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Doctor Strange",
+    "description": "A surgeon learns mystic arts after a tragic accident.",
+    "casts": [
+      "Benedict Cumberbatch",
+      "Tilda Swinton"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=HSzx-zryEgM",
+    "language": "English",
+    "releaseDate": "2016-11-04",
+    "director": "Scott Derrickson",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Black Panther",
+    "description": "T’Challa returns home to rule Wakanda.",
+    "casts": [
+      "Chadwick Boseman",
+      "Michael B. Jordan"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=xjDjIWPwcPU",
+    "language": "English",
+    "releaseDate": "2018-02-16",
+    "director": "Ryan Coogler",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "description": "The Avengers attempt to stop Thanos from collecting all Infinity Stones.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Josh Brolin",
+      "Chris Evans"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=6ZfuNTqbHE8",
+    "language": "English",
+    "releaseDate": "2018-04-27",
+    "director": "Anthony Russo, Joe Russo",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Avengers: Endgame",
+    "description": "The Avengers assemble one final time to undo Thanos’ actions.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Scarlett Johansson"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+    "language": "English",
+    "releaseDate": "2019-04-26",
+    "director": "Anthony Russo, Joe Russo",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Spider-Man: No Way Home",
+    "description": "Peter Parker faces villains from multiple universes.",
+    "casts": [
+      "Tom Holland",
+      "Zendaya",
+      "Benedict Cumberbatch"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=JfVOs4VSpmA",
+    "language": "English",
+    "releaseDate": "2021-12-17",
+    "director": "Jon Watts",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Doctor Strange in the Multiverse of Madness",
+    "description": "Doctor Strange navigates the dangerous multiverse.",
+    "casts": [
+      "Benedict Cumberbatch",
+      "Elizabeth Olsen"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=aWzlQ2N6qqg",
+    "language": "English",
+    "releaseDate": "2022-05-06",
+    "director": "Sam Raimi",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Guardians of the Galaxy Vol. 3",
+    "description": "The Guardians fight to protect Rocket’s past and future.",
+    "casts": [
+      "Chris Pratt",
+      "Zoe Saldana"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=u3V5KDHRQvk",
+    "language": "English",
+    "releaseDate": "2023-05-05",
+    "director": "James Gunn",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Iron Man",
+    "description": "A billionaire industrialist builds a powered suit and becomes a superhero.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Gwyneth Paltrow",
+      "Jeff Bridges"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=8ugaeA-nMTc",
+    "language": "English",
+    "releaseDate": "2008-05-02",
+    "director": "Jon Favreau",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "The Incredible Hulk",
+    "description": "Bruce Banner seeks a cure while evading the military.",
+    "casts": [
+      "Edward Norton",
+      "Liv Tyler",
+      "Tim Roth"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=xbqNb2PFKKA",
+    "language": "English",
+    "releaseDate": "2008-06-13",
+    "director": "Louis Leterrier",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Iron Man 2",
+    "description": "Tony Stark faces new enemies and political pressure.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Scarlett Johansson",
+      "Mickey Rourke"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=BoohRoVA9WQ",
+    "language": "English",
+    "releaseDate": "2010-05-07",
+    "director": "Jon Favreau",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Thor",
+    "description": "The Norse god Thor is banished to Earth to learn humility.",
+    "casts": [
+      "Chris Hemsworth",
+      "Natalie Portman",
+      "Tom Hiddleston"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=JOddp-nlNvQ",
+    "language": "English",
+    "releaseDate": "2011-05-06",
+    "director": "Kenneth Branagh",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Captain America: The First Avenger",
+    "description": "Steve Rogers becomes a super soldier during World War II.",
+    "casts": [
+      "Chris Evans",
+      "Hayley Atwell",
+      "Sebastian Stan"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=JerVrbLldXw",
+    "language": "English",
+    "releaseDate": "2011-07-22",
+    "director": "Joe Johnston",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "The Avengers",
+    "description": "Earth’s mightiest heroes unite to stop Loki.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Scarlett Johansson"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=eOrNdBpGMv8",
+    "language": "English",
+    "releaseDate": "2012-05-04",
+    "director": "Joss Whedon",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Iron Man 3",
+    "description": "Tony Stark confronts the Mandarin and his own fears.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Gwyneth Paltrow",
+      "Ben Kingsley"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=Ke1Y3P9D0Bc",
+    "language": "English",
+    "releaseDate": "2013-05-03",
+    "director": "Shane Black",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Thor: The Dark World",
+    "description": "Thor battles an ancient enemy threatening the universe.",
+    "casts": [
+      "Chris Hemsworth",
+      "Natalie Portman",
+      "Tom Hiddleston"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=npvJ9FTgZbM",
+    "language": "English",
+    "releaseDate": "2013-11-08",
+    "director": "Alan Taylor",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Captain America: The Winter Soldier",
+    "description": "Captain America uncovers a conspiracy within S.H.I.E.L.D.",
+    "casts": [
+      "Chris Evans",
+      "Scarlett Johansson",
+      "Sebastian Stan"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=7SlILk2WMTI",
+    "language": "English",
+    "releaseDate": "2014-04-04",
+    "director": "Anthony Russo, Joe Russo",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Guardians of the Galaxy",
+    "description": "A group of misfits protect the universe.",
+    "casts": [
+      "Chris Pratt",
+      "Zoe Saldana",
+      "Dave Bautista"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=d96cjJhvlMA",
+    "language": "English",
+    "releaseDate": "2014-08-01",
+    "director": "James Gunn",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Avengers: Age of Ultron",
+    "description": "The Avengers battle a rogue AI.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Chris Hemsworth",
+      "Elizabeth Olsen"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=tmeOjFno6Do",
+    "language": "English",
+    "releaseDate": "2015-05-01",
+    "director": "Joss Whedon",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Ant-Man",
+    "description": "A thief becomes a hero with a shrinking suit.",
+    "casts": [
+      "Paul Rudd",
+      "Evangeline Lilly",
+      "Michael Douglas"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=pWdKf3MneyI",
+    "language": "English",
+    "releaseDate": "2015-07-17",
+    "director": "Peyton Reed",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Captain America: Civil War",
+    "description": "The Avengers split over government oversight.",
+    "casts": [
+      "Chris Evans",
+      "Robert Downey Jr.",
+      "Tom Holland"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=dKrVegVI0Us",
+    "language": "English",
+    "releaseDate": "2016-05-06",
+    "director": "Anthony Russo, Joe Russo",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Doctor Strange",
+    "description": "A surgeon learns mystic arts.",
+    "casts": [
+      "Benedict Cumberbatch",
+      "Tilda Swinton"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=HSzx-zryEgM",
+    "language": "English",
+    "releaseDate": "2016-11-04",
+    "director": "Scott Derrickson",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Guardians of the Galaxy Vol. 2",
+    "description": "The Guardians uncover Peter Quill’s origins.",
+    "casts": [
+      "Chris Pratt",
+      "Zoe Saldana"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=dW1BIid8Osg",
+    "language": "English",
+    "releaseDate": "2017-05-05",
+    "director": "James Gunn",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Spider-Man: Homecoming",
+    "description": "Peter Parker balances school and hero life.",
+    "casts": [
+      "Tom Holland",
+      "Michael Keaton"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=n9DwoQ7HWvI",
+    "language": "English",
+    "releaseDate": "2017-07-07",
+    "director": "Jon Watts",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Thor: Ragnarok",
+    "description": "Thor battles Hela and prevents Ragnarok.",
+    "casts": [
+      "Chris Hemsworth",
+      "Cate Blanchett"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=ue80QwXMRHg",
+    "language": "English",
+    "releaseDate": "2017-11-03",
+    "director": "Taika Waititi",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Black Panther",
+    "description": "T’Challa becomes king of Wakanda.",
+    "casts": [
+      "Chadwick Boseman",
+      "Michael B. Jordan"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=xjDjIWPwcPU",
+    "language": "English",
+    "releaseDate": "2018-02-16",
+    "director": "Ryan Coogler",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "description": "The Avengers battle Thanos.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Josh Brolin"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=6ZfuNTqbHE8",
+    "language": "English",
+    "releaseDate": "2018-04-27",
+    "director": "Anthony Russo, Joe Russo",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Avengers: Endgame",
+    "description": "The Avengers undo Thanos’ snap.",
+    "casts": [
+      "Robert Downey Jr.",
+      "Chris Evans"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+    "language": "English",
+    "releaseDate": "2019-04-26",
+    "director": "Anthony Russo, Joe Russo",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Spider-Man: Far From Home",
+    "description": "Peter Parker faces Mysterio after Endgame.",
+    "casts": [
+      "Tom Holland",
+      "Jake Gyllenhaal"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=Nt9L1jCKGnE",
+    "language": "English",
+    "releaseDate": "2019-07-02",
+    "director": "Jon Watts",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Shang-Chi and the Legend of the Ten Rings",
+    "description": "A martial artist confronts his past.",
+    "casts": [
+      "Simu Liu",
+      "Tony Leung"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=giWIr7U1deA",
+    "language": "English",
+    "releaseDate": "2021-09-03",
+    "director": "Destin Daniel Cretton",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Eternals",
+    "description": "Ancient beings protect Earth from cosmic threats.",
+    "casts": [
+      "Gemma Chan",
+      "Richard Madden"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=x_me3xsvDgk",
+    "language": "English",
+    "releaseDate": "2021-11-05",
+    "director": "Chloé Zhao",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Spider-Man: No Way Home",
+    "description": "Peter Parker faces multiversal threats.",
+    "casts": [
+      "Tom Holland",
+      "Zendaya"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=JfVOs4VSpmA",
+    "language": "English",
+    "releaseDate": "2021-12-17",
+    "director": "Jon Watts",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Doctor Strange in the Multiverse of Madness",
+    "description": "Doctor Strange navigates the multiverse.",
+    "casts": [
+      "Benedict Cumberbatch",
+      "Elizabeth Olsen"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=aWzlQ2N6qqg",
+    "language": "English",
+    "releaseDate": "2022-05-06",
+    "director": "Sam Raimi",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Thor: Love and Thunder",
+    "description": "Thor faces Gorr the God Butcher.",
+    "casts": [
+      "Chris Hemsworth",
+      "Natalie Portman"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=Go8nTmfrQd8",
+    "language": "English",
+    "releaseDate": "2022-07-08",
+    "director": "Taika Waititi",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Black Panther: Wakanda Forever",
+    "description": "Wakanda faces new global threats.",
+    "casts": [
+      "Letitia Wright",
+      "Angela Bassett"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=_Z3QKkl1WyM",
+    "language": "English",
+    "releaseDate": "2022-11-11",
+    "director": "Ryan Coogler",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Ant-Man and the Wasp: Quantumania",
+    "description": "Ant-Man explores the Quantum Realm.",
+    "casts": [
+      "Paul Rudd",
+      "Jonathan Majors"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=ZlNFpri-Y40",
+    "language": "English",
+    "releaseDate": "2023-02-17",
+    "director": "Peyton Reed",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "Guardians of the Galaxy Vol. 3",
+    "description": "The Guardians protect Rocket’s future.",
+    "casts": [
+      "Chris Pratt",
+      "Zoe Saldana"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=u3V5KDHRQvk",
+    "language": "English",
+    "releaseDate": "2023-05-05",
+    "director": "James Gunn",
+    "releaseStatus": "RELEASED"
+  },
+  {
+    "movieName": "The Marvels",
+    "description": "Captain Marvel teams up with Ms. Marvel and Monica Rambeau.",
+    "casts": [
+      "Brie Larson",
+      "Iman Vellani"
+    ],
+    "trailerUrl": "https://www.youtube.com/watch?v=wS_qbDztgVY",
+    "language": "English",
+    "releaseDate": "2023-11-10",
+    "director": "Nia DaCosta",
+    "releaseStatus": "RELEASED"
+  }
+]

@@ -1,0 +1,970 @@
+[
+  {
+    "name": "PVR Phoenix Marketcity",
+    "description": "Premium multiplex cinema",
+    "city": "Bengaluru",
+    "pincode": 560048,
+    "address": "Phoenix Marketcity, Mahadevapura",
+    "movies": []
+  },
+  {
+    "name": "PVR Cinemas",
+    "description": "Luxury multiplex with Dolby Atmos sound",
+    "city": "Bangalore",
+    "pincode": 560001,
+    "address": "Forum Mall, Hosur Road, Bangalore",
+    "movies": []
+  },
+  {
+    "name": "INOX",
+    "description": "Premium movie experience with recliner seats",
+    "city": "Mumbai",
+    "pincode": 400001,
+    "address": "Nariman Point, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "Miraj Cinemas",
+    "description": "Modern screens with comfortable seating",
+    "city": "Ahmedabad",
+    "pincode": 380001,
+    "address": "SG Highway, Ahmedabad",
+    "movies": []
+  },
+  {
+    "name": "PVR ICON Forum Mall",
+    "description": "Luxury multiplex with Dolby Atmos and recliner seats",
+    "city": "Bangalore",
+    "pincode": 560001,
+    "address": "Forum Mall, Hosur Road, Bangalore",
+    "movies": []
+  },
+  {
+    "name": "INOX Insignia South City",
+    "description": "Premium cinema with immersive surround sound",
+    "city": "Kolkata",
+    "pincode": 700001,
+    "address": "South City Mall, Prince Anwar Shah Road, Kolkata",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis VIP SG Highway",
+    "description": "High-end multiplex with lounge seating",
+    "city": "Ahmedabad",
+    "pincode": 380001,
+    "address": "SG Highway, Ahmedabad",
+    "movies": []
+  },
+  {
+    "name": "Miraj Cinemas Andheri",
+    "description": "Modern multiplex with multiple screens",
+    "city": "Mumbai",
+    "pincode": 400001,
+    "address": "Andheri West, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "Raj Mandir Cinema",
+    "description": "Iconic single-screen cinema with heritage interiors",
+    "city": "Jaipur",
+    "pincode": 302001,
+    "address": "Bhagwan Das Road, Jaipur",
+    "movies": []
+  },
+  {
+    "name": "City Pride Kothrud",
+    "description": "Popular local multiplex with affordable pricing",
+    "city": "Pune",
+    "pincode": 411001,
+    "address": "Kothrud, Pune",
+    "movies": []
+  },
+  {
+    "name": "Asian Mukta A2 Cinemas Kukatpally",
+    "description": "Family-friendly cinema with high-quality projection",
+    "city": "Hyderabad",
+    "pincode": 500001,
+    "address": "Kukatpally, Hyderabad",
+    "movies": []
+  },
+  {
+    "name": "Wave Cinemas Mall of India",
+    "description": "Large multiplex inside a premium shopping mall",
+    "city": "Noida",
+    "pincode": 201301,
+    "address": "DLF Mall of India, Noida",
+    "movies": []
+  },
+  {
+    "name": "PVR Phoenix Marketcity",
+    "description": "Premium multiplex with IMAX and Dolby Atmos",
+    "city": "Bangalore",
+    "pincode": 560048,
+    "address": "Phoenix Marketcity, Whitefield, Bangalore",
+    "movies": []
+  },
+  {
+    "name": "INOX Quest Mall",
+    "description": "Luxury cinema experience with plush seating",
+    "city": "Kolkata",
+    "pincode": 700017,
+    "address": "Quest Mall, Park Circus, Kolkata",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis Viviana Mall",
+    "description": "Modern multiplex with 4K projection",
+    "city": "Mumbai",
+    "pincode": 400601,
+    "address": "Viviana Mall, Thane West, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "Carnival Cinemas Wadala",
+    "description": "Affordable multiplex with multiple screens",
+    "city": "Mumbai",
+    "pincode": 400031,
+    "address": "Wadala East, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "Moviemax Infinity Malad",
+    "description": "Spacious multiplex with advanced sound system",
+    "city": "Mumbai",
+    "pincode": 400064,
+    "address": "Infinity Mall, Malad West, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "Rajhans Cinemas Nikol",
+    "description": "Family-oriented cinema with comfortable seating",
+    "city": "Ahmedabad",
+    "pincode": 382350,
+    "address": "Nikol Road, Ahmedabad",
+    "movies": []
+  },
+  {
+    "name": "Wave Cinemas Kaushambi",
+    "description": "Large multiplex with immersive surround sound",
+    "city": "Ghaziabad",
+    "pincode": 201010,
+    "address": "Kaushambi Mall, Ghaziabad",
+    "movies": []
+  },
+  {
+    "name": "SRS Cinemas Faridabad",
+    "description": "Multiplex with budget-friendly ticket pricing",
+    "city": "Faridabad",
+    "pincode": 121001,
+    "address": "Sector 12, Faridabad",
+    "movies": []
+  },
+  {
+    "name": "Asian Cinemas Uppal",
+    "description": "High-quality screens with crystal clear projection",
+    "city": "Hyderabad",
+    "pincode": 500039,
+    "address": "Uppal Main Road, Hyderabad",
+    "movies": []
+  },
+  {
+    "name": "Mukta A2 Cinemas Kalyan",
+    "description": "Well-maintained multiplex with modern interiors",
+    "city": "Mumbai",
+    "pincode": 421301,
+    "address": "Kalyan West, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "City Pride Satara Road",
+    "description": "Popular local cinema with loyal audience base",
+    "city": "Pune",
+    "pincode": 411009,
+    "address": "Satara Road, Pune",
+    "movies": []
+  },
+  {
+    "name": "Eros Cinema Churchgate",
+    "description": "Heritage single-screen cinema with classic charm",
+    "city": "Mumbai",
+    "pincode": 400020,
+    "address": "Churchgate, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "PVR Select Citywalk",
+    "description": "Luxury multiplex with premium screens",
+    "city": "Delhi",
+    "pincode": 110017,
+    "address": "Select Citywalk Mall, Saket, Delhi",
+    "movies": []
+  },
+  {
+    "name": "INOX Nehru Place",
+    "description": "Modern multiplex with surround sound",
+    "city": "Delhi",
+    "pincode": 110019,
+    "address": "Nehru Place, Delhi",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis DLF Avenue",
+    "description": "High-end cinema with recliner seating",
+    "city": "Delhi",
+    "pincode": 110017,
+    "address": "DLF Avenue Mall, Saket, Delhi",
+    "movies": []
+  },
+  {
+    "name": "PVR Juhu",
+    "description": "Premium theatre near the beachfront",
+    "city": "Mumbai",
+    "pincode": 400049,
+    "address": "Juhu Tara Road, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "INOX R City Ghatkopar",
+    "description": "Multiplex with IMAX screens",
+    "city": "Mumbai",
+    "pincode": 400086,
+    "address": "R City Mall, Ghatkopar West, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis Orion Mall",
+    "description": "Large multiplex with premium sound",
+    "city": "Bangalore",
+    "pincode": 560055,
+    "address": "Orion Mall, Rajajinagar, Bangalore",
+    "movies": []
+  },
+  {
+    "name": "PVR Vega City",
+    "description": "Family-friendly multiplex with comfort seating",
+    "city": "Bangalore",
+    "pincode": 560076,
+    "address": "Vega City Mall, Bannerghatta Road, Bangalore",
+    "movies": []
+  },
+  {
+    "name": "INOX Marina Mall",
+    "description": "Premium cinema inside luxury mall",
+    "city": "Chennai",
+    "pincode": 600041,
+    "address": "Marina Mall, OMR, Chennai",
+    "movies": []
+  },
+  {
+    "name": "SPI Palazzo",
+    "description": "Boutique cinema with Italian interiors",
+    "city": "Chennai",
+    "pincode": 600006,
+    "address": "Forum Vijaya Mall, Vadapalani, Chennai",
+    "movies": []
+  },
+  {
+    "name": "PVR Nexus Kukatpally",
+    "description": "Large multiplex with multiple premium screens",
+    "city": "Hyderabad",
+    "pincode": 500072,
+    "address": "Nexus Mall, Kukatpally, Hyderabad",
+    "movies": []
+  },
+  {
+    "name": "INOX Megaplex Inorbit",
+    "description": "Large multiplex with immersive sound",
+    "city": "Mumbai",
+    "pincode": 400064,
+    "address": "Inorbit Mall, Malad West, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "PVR Oberoi Mall",
+    "description": "Premium screens with recliner seating",
+    "city": "Mumbai",
+    "pincode": 400063,
+    "address": "Oberoi Mall, Goregaon East, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis Seasons Mall",
+    "description": "Modern multiplex with 4K projection",
+    "city": "Pune",
+    "pincode": 411028,
+    "address": "Seasons Mall, Magarpatta, Pune",
+    "movies": []
+  },
+  {
+    "name": "City Pride Akurdi",
+    "description": "Popular local cinema with affordable pricing",
+    "city": "Pune",
+    "pincode": 411035,
+    "address": "Akurdi, Pune",
+    "movies": []
+  },
+  {
+    "name": "INOX Forum Mall",
+    "description": "Premium multiplex inside shopping mall",
+    "city": "Bangalore",
+    "pincode": 560095,
+    "address": "Forum Mall, Koramangala, Bangalore",
+    "movies": []
+  },
+  {
+    "name": "PVR Garuda Mall",
+    "description": "Comfort-focused cinema with Dolby sound",
+    "city": "Bangalore",
+    "pincode": 560025,
+    "address": "Garuda Mall, Magrath Road, Bangalore",
+    "movies": []
+  },
+  {
+    "name": "SPI Escape Cinemas",
+    "description": "Luxury boutique cinema with fine dining",
+    "city": "Chennai",
+    "pincode": 600040,
+    "address": "Express Avenue Mall, Chennai",
+    "movies": []
+  },
+  {
+    "name": "INOX Prozone Mall",
+    "description": "Multiplex with family-friendly seating",
+    "city": "Coimbatore",
+    "pincode": 641035,
+    "address": "Prozone Mall, Coimbatore",
+    "movies": []
+  },
+  {
+    "name": "Asian CineSquare",
+    "description": "High-capacity screens with premium audio",
+    "city": "Hyderabad",
+    "pincode": 500084,
+    "address": "Gachibowli, Hyderabad",
+    "movies": []
+  },
+  {
+    "name": "PVR Central Mall",
+    "description": "Compact multiplex with modern interiors",
+    "city": "Ahmedabad",
+    "pincode": 380009,
+    "address": "Central Mall, Ambawadi, Ahmedabad",
+    "movies": []
+  },
+  {
+    "name": "PVR Logix Noida",
+    "description": "Premium multiplex with IMAX screens",
+    "city": "Noida",
+    "pincode": 201301,
+    "address": "Logix City Center, Noida",
+    "movies": []
+  },
+  {
+    "name": "INOX Crystal Mall",
+    "description": "Luxury cinema with plush seating",
+    "city": "Jaipur",
+    "pincode": 302001,
+    "address": "Crystal Palm Mall, Jaipur",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis Cross River",
+    "description": "Modern multiplex with advanced projection",
+    "city": "Delhi",
+    "pincode": 110032,
+    "address": "Cross River Mall, Shahdara, Delhi",
+    "movies": []
+  },
+  {
+    "name": "Carnival Cinemas Dindigul",
+    "description": "Budget-friendly multiplex with clean screens",
+    "city": "Dindigul",
+    "pincode": 624001,
+    "address": "GT Road, Dindigul",
+    "movies": []
+  },
+  {
+    "name": "Mukta A2 Cinemas Panvel",
+    "description": "Modern cinema with comfortable seating",
+    "city": "Panvel",
+    "pincode": 410206,
+    "address": "Old Panvel, Navi Mumbai",
+    "movies": []
+  },
+  {
+    "name": "Rajhans Cinemas Vesu",
+    "description": "Premium family multiplex",
+    "city": "Surat",
+    "pincode": 395007,
+    "address": "Vesu Road, Surat",
+    "movies": []
+  },
+  {
+    "name": "Asian Cinemas ECIL",
+    "description": "High-quality projection with immersive audio",
+    "city": "Hyderabad",
+    "pincode": 500062,
+    "address": "ECIL Cross Roads, Hyderabad",
+    "movies": []
+  },
+  {
+    "name": "Wave Cinemas Raja Park",
+    "description": "Local favorite cinema with affordable pricing",
+    "city": "Jaipur",
+    "pincode": 302004,
+    "address": "Raja Park, Jaipur",
+    "movies": []
+  },
+  {
+    "name": "SRS Cinemas Palwal",
+    "description": "Compact multiplex serving suburban audience",
+    "city": "Palwal",
+    "pincode": 121102,
+    "address": "GT Road, Palwal",
+    "movies": []
+  },
+  {
+    "name": "Galaxy Theatre Chembur",
+    "description": "Iconic single-screen cinema with legacy charm",
+    "city": "Mumbai",
+    "pincode": 400071,
+    "address": "Chembur East, Mumbai",
+    "movies": []
+  },
+  {
+    "name": "PVR Aura Mall",
+    "description": "Premium multiplex with Dolby Atmos",
+    "city": "Bhopal",
+    "pincode": 462011,
+    "address": "Aura Mall, Gulmohar Colony, Bhopal",
+    "movies": []
+  },
+  {
+    "name": "INOX Capital Mall",
+    "description": "Modern multiplex with luxury seating",
+    "city": "Raipur",
+    "pincode": 492001,
+    "address": "Capital Mall, Pandri, Raipur",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis Nexus Mall",
+    "description": "High-end cinema with immersive sound",
+    "city": "Amritsar",
+    "pincode": 143001,
+    "address": "Nexus Mall, Ranjit Avenue, Amritsar",
+    "movies": []
+  },
+  {
+    "name": "PVR Treasure Island",
+    "description": "Multiplex with premium interiors",
+    "city": "Indore",
+    "pincode": 452001,
+    "address": "Treasure Island Mall, MG Road, Indore",
+    "movies": []
+  },
+  {
+    "name": "INOX Elante Mall",
+    "description": "Large multiplex with IMAX experience",
+    "city": "Chandigarh",
+    "pincode": 160002,
+    "address": "Elante Mall, Industrial Area, Chandigarh",
+    "movies": []
+  },
+  {
+    "name": "Wave Cinemas Gomti Nagar",
+    "description": "Family-friendly multiplex",
+    "city": "Lucknow",
+    "pincode": 226010,
+    "address": "Gomti Nagar, Lucknow",
+    "movies": []
+  },
+  {
+    "name": "Carnival Cinemas City Centre",
+    "description": "Affordable cinema with modern screens",
+    "city": "Siliguri",
+    "pincode": 734001,
+    "address": "City Centre Mall, Siliguri",
+    "movies": []
+  },
+  {
+    "name": "PVR Cosmos Mall",
+    "description": "Premium multiplex with recliner seating",
+    "city": "Dehradun",
+    "pincode": 248001,
+    "address": "Cosmos Mall, Rajpur Road, Dehradun",
+    "movies": []
+  },
+  {
+    "name": "INOX South City Mall",
+    "description": "Modern cinema with immersive audio",
+    "city": "Patna",
+    "pincode": 800001,
+    "address": "South City Mall, Patna",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis Pacific Mall",
+    "description": "High-quality projection with luxury seating",
+    "city": "Dehradun",
+    "pincode": 248006,
+    "address": "Pacific Mall, Dehradun",
+    "movies": []
+  },
+  {
+    "name": "PVR City Centre",
+    "description": "Compact multiplex with modern amenities",
+    "city": "Gwalior",
+    "pincode": 474001,
+    "address": "City Centre Mall, Gwalior",
+    "movies": []
+  },
+  {
+    "name": "INOX Mall of Travancore",
+    "description": "Premium cinema with spacious screens",
+    "city": "Trivandrum",
+    "pincode": 695024,
+    "address": "Mall of Travancore, Trivandrum",
+    "movies": []
+  },
+  {
+    "name": "Carnival Cinemas Lulu Mall",
+    "description": "Large multiplex inside premium mall",
+    "city": "Kochi",
+    "pincode": 682024,
+    "address": "Lulu Mall, Edappally, Kochi",
+    "movies": []
+  },
+  {
+    "name": "PVR Forum Mall",
+    "description": "Luxury multiplex with Dolby sound",
+    "city": "Kochi",
+    "pincode": 682016,
+    "address": "Forum Mall, Kochi",
+    "movies": []
+  },
+  {
+    "name": "INOX DB Mall",
+    "description": "Premium cinema with immersive experience",
+    "city": "Bhopal",
+    "pincode": 462016,
+    "address": "DB Mall, MP Nagar, Bhopal",
+    "movies": []
+  },
+  {
+    "name": "PVR Lake City Mall",
+    "description": "Premium multiplex with Dolby Atmos",
+    "city": "Udaipur",
+    "pincode": 313001,
+    "address": "Lake City Mall, Fatehsagar Road, Udaipur",
+    "movies": []
+  },
+  {
+    "name": "INOX Prozone Mall",
+    "description": "Modern multiplex with luxury seating",
+    "city": "Aurangabad",
+    "pincode": 431003,
+    "address": "Prozone Mall, CIDCO, Aurangabad",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis Downtown",
+    "description": "High-end cinema with immersive sound",
+    "city": "Nagpur",
+    "pincode": 440001,
+    "address": "Sitabuldi Main Road, Nagpur",
+    "movies": []
+  },
+  {
+    "name": "Carnival Cinemas Silver Arc",
+    "description": "Affordable multiplex with modern screens",
+    "city": "Jodhpur",
+    "pincode": 342001,
+    "address": "Silver Arc Mall, Sardarpura, Jodhpur",
+    "movies": []
+  },
+  {
+    "name": "PVR Gold City Mall",
+    "description": "Luxury cinema with recliner seats",
+    "city": "Dhanbad",
+    "pincode": 826001,
+    "address": "City Mall, Bank More, Dhanbad",
+    "movies": []
+  },
+  {
+    "name": "INOX Artech Mall",
+    "description": "Premium multiplex with crystal-clear projection",
+    "city": "Thrissur",
+    "pincode": 680001,
+    "address": "Artech Mall, MG Road, Thrissur",
+    "movies": []
+  },
+  {
+    "name": "Wave Cinemas City Plaza",
+    "description": "Family-friendly cinema with spacious halls",
+    "city": "Agra",
+    "pincode": 282001,
+    "address": "City Plaza, Sanjay Place, Agra",
+    "movies": []
+  },
+  {
+    "name": "Mukta A2 Cinemas Sapphire",
+    "description": "Modern multiplex with advanced sound",
+    "city": "Gurgaon",
+    "pincode": 122002,
+    "address": "Sapphire Mall, Golf Course Road, Gurgaon",
+    "movies": []
+  },
+  {
+    "name": "City Pride Central",
+    "description": "Popular cinema with loyal audience base",
+    "city": "Solapur",
+    "pincode": 413001,
+    "address": "Central Chowk, Solapur",
+    "movies": []
+  },
+  {
+    "name": "Asian Cinemas Pearl",
+    "description": "High-quality screens with immersive audio",
+    "city": "Vijayawada",
+    "pincode": 520001,
+    "address": "MG Road, Vijayawada",
+    "movies": []
+  },
+  {
+    "name": "INOX Riverfront",
+    "description": "Premium multiplex overlooking riverfront",
+    "city": "Cuttack",
+    "pincode": 753001,
+    "address": "Riverfront Road, Cuttack",
+    "movies": []
+  },
+  {
+    "name": "PVR Highland Mall",
+    "description": "Luxury multiplex with modern interiors",
+    "city": "Shimla",
+    "pincode": 171001,
+    "address": "The Mall Road, Shimla",
+    "movies": []
+  },
+  {
+    "name": "PVR Orion Uptown",
+    "description": "Premium multiplex with immersive Dolby sound",
+    "city": "Bangalore",
+    "pincode": 560037,
+    "address": "Orion Uptown Mall, KR Puram, Bangalore",
+    "movies": []
+  },
+  {
+    "name": "INOX Nexus Seawoods",
+    "description": "Luxury cinema with recliner seating",
+    "city": "Navi Mumbai",
+    "pincode": 400706,
+    "address": "Seawoods Grand Central Mall, Navi Mumbai",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis Andromeda Mall",
+    "description": "Modern multiplex with 4K laser projection",
+    "city": "Panipat",
+    "pincode": 132103,
+    "address": "Andromeda Mall, GT Road, Panipat",
+    "movies": []
+  },
+  {
+    "name": "Carnival Cinemas Grand Venice",
+    "description": "Large multiplex inspired by European architecture",
+    "city": "Greater Noida",
+    "pincode": 201308,
+    "address": "Grand Venice Mall, Greater Noida",
+    "movies": []
+  },
+  {
+    "name": "PVR Gold Phoenix Palassio",
+    "description": "Ultra-luxury cinema with gold-class seating",
+    "city": "Lucknow",
+    "pincode": 226010,
+    "address": "Phoenix Palassio Mall, Lucknow",
+    "movies": []
+  },
+  {
+    "name": "INOX Central Mall",
+    "description": "Compact multiplex with modern interiors",
+    "city": "Bilaspur",
+    "pincode": 495001,
+    "address": "Central Mall, Vyapar Vihar, Bilaspur",
+    "movies": []
+  },
+  {
+    "name": "Wave Cinemas Pacific Mall",
+    "description": "Multiplex with spacious seating and clear audio",
+    "city": "Haridwar",
+    "pincode": 249401,
+    "address": "Pacific Mall, Haridwar",
+    "movies": []
+  },
+  {
+    "name": "Mukta A2 Cinemas Infinity",
+    "description": "Family-friendly cinema with multiple screens",
+    "city": "Amravati",
+    "pincode": 444601,
+    "address": "Infinity Mall, Amravati",
+    "movies": []
+  },
+  {
+    "name": "Asian Cinemas Spectrum",
+    "description": "High-capacity multiplex with premium projection",
+    "city": "Warangal",
+    "pincode": 506002,
+    "address": "Hanamkonda Road, Warangal",
+    "movies": []
+  },
+  {
+    "name": "Rajhans Cinemas Empire",
+    "description": "Premium family multiplex with modern amenities",
+    "city": "Vadodara",
+    "pincode": 390011,
+    "address": "Empire Mall, Sayajigunj, Vadodara",
+    "movies": []
+  },
+  {
+    "name": "PVR Magneto Mall",
+    "description": "Premium multiplex with Dolby Atmos sound",
+    "city": "Raipur",
+    "pincode": 492001,
+    "address": "Magneto Mall, Labhandi, Raipur",
+    "movies": []
+  },
+  {
+    "name": "INOX Garuda Mall",
+    "description": "Modern multiplex with comfortable seating",
+    "city": "Bangalore",
+    "pincode": 560025,
+    "address": "Garuda Mall, Magrath Road, Bangalore",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis Brookefields",
+    "description": "High-end cinema with immersive sound",
+    "city": "Coimbatore",
+    "pincode": 641001,
+    "address": "Brookefields Mall, Coimbatore",
+    "movies": []
+  },
+  {
+    "name": "Carnival Cinemas Lake Mall",
+    "description": "Affordable multiplex with modern screens",
+    "city": "Kolkata",
+    "pincode": 700029,
+    "address": "Lake Mall, Rashbehari Avenue, Kolkata",
+    "movies": []
+  },
+  {
+    "name": "PVR Shipra Mall",
+    "description": "Family-friendly multiplex",
+    "city": "Ghaziabad",
+    "pincode": 201010,
+    "address": "Shipra Mall, Indirapuram, Ghaziabad",
+    "movies": []
+  },
+  {
+    "name": "INOX Raghuleela Mall",
+    "description": "Premium cinema with plush seating",
+    "city": "Vashi",
+    "pincode": 400703,
+    "address": "Raghuleela Mall, Vashi",
+    "movies": []
+  },
+  {
+    "name": "Wave Cinemas Fun Republic",
+    "description": "Popular multiplex with spacious halls",
+    "city": "Kanpur",
+    "pincode": 208002,
+    "address": "Fun Republic Mall, Kanpur",
+    "movies": []
+  },
+  {
+    "name": "Mukta A2 Cinemas Akola",
+    "description": "Compact multiplex with modern interiors",
+    "city": "Akola",
+    "pincode": 444001,
+    "address": "Civil Lines, Akola",
+    "movies": []
+  },
+  {
+    "name": "Asian Cinemas LB Nagar",
+    "description": "High-quality projection with immersive audio",
+    "city": "Hyderabad",
+    "pincode": 500074,
+    "address": "LB Nagar, Hyderabad",
+    "movies": []
+  },
+  {
+    "name": "Rajhans Cinemas Pal",
+    "description": "Premium family multiplex",
+    "city": "Surat",
+    "pincode": 395009,
+    "address": "Pal Road, Surat",
+    "movies": []
+  },
+  {
+    "name": "PVR Central Square",
+    "description": "Modern multiplex with premium seating",
+    "city": "Ujjain",
+    "pincode": 456010,
+    "address": "Central Square Mall, Ujjain",
+    "movies": []
+  },
+  {
+    "name": "INOX City Centre",
+    "description": "Compact cinema with Dolby sound",
+    "city": "Haldwani",
+    "pincode": 263139,
+    "address": "City Centre Mall, Haldwani",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis Vega Mall",
+    "description": "High-end multiplex with recliner seats",
+    "city": "Mysore",
+    "pincode": 570017,
+    "address": "Vega Mall, Mysore Road, Mysore",
+    "movies": []
+  },
+  {
+    "name": "Carnival Cinemas SMC",
+    "description": "Affordable multiplex for local audience",
+    "city": "Sambalpur",
+    "pincode": 768001,
+    "address": "SMC Mall, Sambalpur",
+    "movies": []
+  },
+  {
+    "name": "PVR Highland City",
+    "description": "Luxury multiplex with modern interiors",
+    "city": "Manali",
+    "pincode": 175131,
+    "address": "Mall Road, Manali",
+    "movies": []
+  },
+  {
+    "name": "INOX Millenium Mall",
+    "description": "Modern cinema with spacious seating",
+    "city": "Jalandhar",
+    "pincode": 144001,
+    "address": "Millenium Mall, Jalandhar",
+    "movies": []
+  },
+  {
+    "name": "Wave Cinemas Crown Plaza",
+    "description": "Family multiplex with multiple screens",
+    "city": "Rohtak",
+    "pincode": 124001,
+    "address": "Crown Plaza, Rohtak",
+    "movies": []
+  },
+  {
+    "name": "Mukta A2 Cinemas Jalgaon",
+    "description": "Modern cinema with affordable pricing",
+    "city": "Jalgaon",
+    "pincode": 425001,
+    "address": "MIDC Area, Jalgaon",
+    "movies": []
+  },
+  {
+    "name": "Asian Cinemas Suryapet",
+    "description": "High-quality screens with immersive sound",
+    "city": "Suryapet",
+    "pincode": 508213,
+    "address": "Main Road, Suryapet",
+    "movies": []
+  },
+  {
+    "name": "Rajhans Cinemas Katargam",
+    "description": "Family-oriented multiplex with comfort seating",
+    "city": "Surat",
+    "pincode": 395004,
+    "address": "Katargam, Surat",
+    "movies": []
+  },
+  {
+    "name": "PVR Galaxy Mall",
+    "description": "Premium cinema with advanced sound system",
+    "city": "Rewa",
+    "pincode": 486001,
+    "address": "Galaxy Mall, Rewa",
+    "movies": []
+  },
+  {
+    "name": "INOX Orbit Mall",
+    "description": "Modern multiplex with luxury interiors",
+    "city": "Alwar",
+    "pincode": 301001,
+    "address": "Orbit Mall, Alwar",
+    "movies": []
+  },
+  {
+    "name": "Cinepolis Star Mall",
+    "description": "High-end cinema with premium seating",
+    "city": "Hisar",
+    "pincode": 125001,
+    "address": "Star Mall, Hisar",
+    "movies": []
+  },
+  {
+    "name": "Carnival Cinemas Pearl City",
+    "description": "Affordable multiplex with clean screens",
+    "city": "Tuticorin",
+    "pincode": 628001,
+    "address": "Pearl City Mall, Tuticorin",
+    "movies": []
+  },
+  {
+    "name": "PVR Silver Square",
+    "description": "Compact multiplex with modern amenities",
+    "city": "Nanded",
+    "pincode": 431601,
+    "address": "Silver Square Mall, Nanded",
+    "movies": []
+  },
+  {
+    "name": "INOX Royal Plaza",
+    "description": "Premium cinema with immersive experience",
+    "city": "Kota",
+    "pincode": 324001,
+    "address": "Royal Plaza Mall, Kota",
+    "movies": []
+  },
+  {
+    "name": "Wave Cinemas Emerald",
+    "description": "Family-friendly multiplex with spacious halls",
+    "city": "Bharuch",
+    "pincode": 392001,
+    "address": "Emerald Mall, Bharuch",
+    "movies": []
+  },
+  {
+    "name": "Mukta A2 Cinemas Latur",
+    "description": "Modern cinema with comfortable seating",
+    "city": "Latur",
+    "pincode": 413512,
+    "address": "Main Road, Latur",
+    "movies": []
+  },
+  {
+    "name": "Asian Cinemas Nalgonda",
+    "description": "High-quality projection with surround sound",
+    "city": "Nalgonda",
+    "pincode": 508001,
+    "address": "Clock Tower Road, Nalgonda",
+    "movies": []
+  },
+  {
+    "name": "Rajhans Cinemas Varachha",
+    "description": "Premium multiplex for family audiences",
+    "city": "Surat",
+    "pincode": 395006,
+    "address": "Varachha Road, Surat",
+    "movies": []
+  }
+]
