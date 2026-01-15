@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 
 // 🔧 CONFIG
 const MONGO_URI = "mongodb://localhost:27017/BookMyShow";
-const MOVIES_FILE = "./movies.json";
-const THEATRES_FILE = "./theatres.json";
+const MOVIES_FILE = "./BookMyShow.movies.json";
+const THEATRES_FILE = "./BookMyShow.theatres.json";
 
 const MIN_MOVIES = 3;
 const MAX_MOVIES = 6;
