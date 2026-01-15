@@ -40,9 +40,20 @@ const createTheatre = async (req, res) => {
 
 const getTheatres = async (req, res) => {
   try {
-    const { name } = req.params;
+    let query = {};
+    const { name, city, pincode } = req.query;
 
-    const data = await theatreService.FetchTheatre(name);
+    if (name) {
+      query.name = name;
+    }
+    if (city) {
+      query.city = city;
+    }
+    if (pincode) {
+      query.pincode = pincode;
+    }
+
+    const data = await theatreService.FetchTheatre(query);
 
     return res.status(200).json({
       success: true,
@@ -80,11 +91,10 @@ const deleteTheatres = async (req, res) => {
     });
   }
 };
-
+const updateTheatre = async (req, res) => {};
 const theatreMoviesController = async (req, res) => {
   try {
     const theatreID = req.params.id;
-    console.log(theatreID);
 
     if (!theatreID) {
       const error = new Error("Theatre ID is Missing");
@@ -93,21 +103,25 @@ const theatreMoviesController = async (req, res) => {
       throw error;
     }
 
-    const { movies, flag } = req.body;
-    console.log(movies);
-    console.log(flag);
+    const { movies, insert } = req.body;
 
     const UpdatedTheatre = await theatreService.TheatreMoviesService(
       theatreID,
       movies,
-      flag
+      insert
     );
 
     res.status(200).json(UpdatedTheatre);
   } catch (error) {
-    return res.status(error.statusCode).json({
+    return res.status(500).json({
       error,
     });
   }
 };
-export { createTheatre, getTheatres, deleteTheatres, theatreMoviesController };
+export {
+  createTheatre,
+  getTheatres,
+  deleteTheatres,
+  theatreMoviesController,
+  updateTheatre,
+};
