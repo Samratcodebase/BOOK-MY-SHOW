@@ -33,7 +33,7 @@ const DeleteTheatre = async (theatreID) => {
   return deletedTheatre;
 };
 
-const FetchTheatre = async (query, movieID = null) => {
+const FetchTheatre = async (query) => {
   const theatres = await Theatre.find(query).populate("movies");
 
   //theatres.lenght is 0 if Empty array  So !theatre.length ==true
@@ -43,31 +43,8 @@ const FetchTheatre = async (query, movieID = null) => {
     throw error;
   }
 
-  if (!movieID) {
-    return theatres;
-  }
-
-  if (movieID) {
-    // Filter theatres to only include the movie matching movieID
-    const filteredTheatres = theatres
-      .map((theatre) => {
-        const matchingMovies = theatre.movies.filter((movie) =>
-          movie._id.equals(movieID)
-        );
-
-        if (matchingMovies.length > 0) {
-          return {
-            ...theatre.toObject(), // convert Mongoose document to plain object
-            movies: matchingMovies,
-          };
-        }
-
-        return null; 
-      })
-      .filter(Boolean);
-
-    return filteredTheatres;
-  }
+  return theatres;
+ 
 };
 
 /**
