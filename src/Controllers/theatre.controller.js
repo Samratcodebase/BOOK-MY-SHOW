@@ -40,9 +40,20 @@ const createTheatre = async (req, res) => {
 
 const getTheatres = async (req, res) => {
   try {
-    const { name } = req.params;
+    let query = {};
+    const { name, city, pincode } = req.query;
 
-    const data = await theatreService.FetchTheatre(name);
+    if (name) {
+      query.name = name;
+    }
+    if (city) {
+      query.city = city;
+    }
+    if (pincode) {
+      query.pincode = pincode;
+    }
+
+    const data = await theatreService.FetchTheatre(query);
 
     return res.status(200).json({
       success: true,
@@ -80,7 +91,7 @@ const deleteTheatres = async (req, res) => {
     });
   }
 };
-
+const updateTheatre = async (req, res) => {};
 const theatreMoviesController = async (req, res) => {
   try {
     const theatreID = req.params.id;
@@ -107,4 +118,10 @@ const theatreMoviesController = async (req, res) => {
     });
   }
 };
-export { createTheatre, getTheatres, deleteTheatres, theatreMoviesController };
+export {
+  createTheatre,
+  getTheatres,
+  deleteTheatres,
+  theatreMoviesController,
+  updateTheatre,
+};

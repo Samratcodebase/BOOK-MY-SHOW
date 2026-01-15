@@ -32,21 +32,14 @@ const DeleteTheatre = async (theatreID) => {
   return deletedTheatre;
 };
 
-const FetchTheatre = async (name) => {
-  if (!name) {
-    return await Theatre.find({});
-  }
-
-  const theatre = await Theatre.findOne({
-    name: { $regex: `^${name}$`, $options: "i" },
-  });
+const FetchTheatre = async (query) => {
+  const theatre = await Theatre.find(query).populate("movies");
 
   if (!theatre) {
     const error = new Error("Theatre not found");
     error.statusCode = 404;
     throw error;
   }
-
   return theatre;
 };
 /**
