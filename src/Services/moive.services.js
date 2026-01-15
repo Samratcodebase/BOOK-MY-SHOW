@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Error } from "mongoose";
 import Movie from "../Models/movie.model.js";
 /**
  * @param req :Object Contaning details about the new Movie that to be Created
@@ -103,6 +103,13 @@ const getMoviesByName = async (movieName) => {
     : {};
 
   const movies = await Movie.find(filter);
+
+  if (movies.length === 0) {
+    const err = new Error("No Matching Movie Found ");
+    err.success = false;
+    err.statusCode = 404;
+    throw err;
+  }
 
   return movies;
 };
