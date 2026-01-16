@@ -95,7 +95,41 @@ const deleteTheatres = async (req, res) => {
     });
   }
 };
-const updateTheatre = async (req, res) => {};
+const updateTheatre = async (req, res) => {
+  try {
+    const theatreID = req.params.id;
+    console.log("Theatre ID :", theatreID);
+    const data = {};
+    const { name, city, pincode } = req.query;
+    if (name) {
+      data.name = name;
+    }
+    if (city) {
+      data.city = city;
+    }
+    if (pincode) {
+      data.pincode = pincode;
+    }
+    if (!theatreID) {
+      const err = new Error("All Fields are Required");
+      err.statusCode = 400;
+      err.success = false;
+      throw err;
+    }
+
+    const UpdatedTheatre = await theatreService.updateTheatre(theatreID, data);
+
+    return res.status(200).json({
+      message: "Updattion Sucessfull",
+      data: UpdatedTheatre,
+    });
+  } catch (error) {
+    return res.status(400).json({
+      message: error.message,
+      success: error.success,
+    });
+  }
+};
 const theatreMoviesController = async (req, res) => {
   try {
     const theatreID = req.params.id;

@@ -44,7 +44,6 @@ const FetchTheatre = async (query) => {
   }
 
   return theatres;
- 
 };
 
 /**
@@ -89,9 +88,21 @@ const TheatreMoviesService = async (theatreID, movies, insert) => {
   theatre = await theatre.populate("movies");
   return theatre;
 };
+const updateTheatre = async (theatreID, data) => {
+  const theatre = await Theatre.findOneAndUpdate({ _id: theatreID }, data, {
+    new: true,
+  });
+
+  if (!theatre) {
+    throw new Error("Internal Server Error");
+  }
+
+  return await theatre.populate("movies");
+};
 export default {
   createTheatre,
   DeleteTheatre,
   FetchTheatre,
   TheatreMoviesService,
+  updateTheatre,
 };

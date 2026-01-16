@@ -8,9 +8,12 @@ import {
 import express from "express";
 const router = express.Router();
 
-router.post("/theatres", createTheatre);
-router.get("/theatres", getTheatres);
-router.delete("/theatres/:id", deleteTheatres);
-router.patch("/theatres/:id", updateTheatre);
-router.patch("/theatres/:id/movies", theatreMoviesController);
+router.route("/theatres")
+.get(getTheatres)
+.post(createTheatre);
+router.route("/theatres/:id")
+.patch(updateTheatre)
+.delete(deleteTheatres);
+router.patch("/theatres/:id/add/movies", theatreMoviesController);
+
 export default router;
