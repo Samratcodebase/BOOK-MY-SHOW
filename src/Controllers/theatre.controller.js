@@ -159,24 +159,24 @@ const theatreMoviesController = async (req, res) => {
 const moviesInTheatre = async (req, res) => {
   try {
     const theatreID = req.params.id;
+    const movieID = req.query.movie || null;
 
     if (!theatreID) {
-      const err = new Error("Invalid Fields");
-      err.statusCode = 403;
-      err.success = false;
-      throw err;
+      return res.status(400).json({
+        message: "Theatre ID is required",
+      });
     }
-    const theatre = await theatreService.getMoviesInTheatre(theatreID);
 
-    return res.status(200).json({
-      theatre,
-    });
+    const theatre = await theatreService.getMoviesInTheatre(theatreID, movieID);
+
+    return res.status(200).json({ theatre });
   } catch (err) {
-    return res.status(err.statusCode).json({
-      err,
+    return res.status(err.statusCode || 500).json({
+      message: err.message,
     });
   }
 };
+
 export {
   createTheatre,
   getTheatres,

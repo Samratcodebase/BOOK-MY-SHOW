@@ -99,19 +99,82 @@ const updateTheatre = async (theatreID, data) => {
 
   return await theatre.populate("movies");
 };
-const getMoviesInTheatre = async (theatreID) => {
-  const theatre = await Theatre.findById(theatreID, {
-    name: 1,
-    city: 1,
-    pincode: 1,
-    movies: 1,
-  }).populate("movies");
-  if (!theatre) {
-    throw new Error("No Theatre Found");
+const getMoviesInTheatre = async (theatreID, movieID) => {
+  const theatreObjectId = new mongoose.Types.ObjectId(theatreID);
+
+  // normalize movie id
+  const movieObjectId =
+    movieID && mongoose.Types.ObjectId.isValid(movieID)
+      ? new mongoose.Types.ObjectId(movieID)
+      : null;
+
+  /**
+   * CASE 1: NO movieID
+   * → return full theatre
+   * → populate movies
+   */
+  if (!movieObjectId) {
+    const theatre = await Theatre.findById(theatreObjectId).populate("movies"); // 👈 requirement satisfied
+
+    if (!theatre) {
+      const err = new Error("Theatre not found");
+      err.statusCode = 404;
+      throw err;
+    }
+
+    return theatre;
   }
 
-  return theatre;
+  /**
+   * CASE 2: theatreID + movieID
+   * → aggregation
+   * → return only matched movie
+   */
+  const pipeline = [
+    { $match: { _id: theatreObjectId } },
+
+    {
+      $project: {
+        name: 1,
+        location: 1,
+        movies: {
+          $filter: {
+            input: "$movies",
+            as: "m",
+            cond: { $eq: ["$$m", movieObjectId] },
+          },
+        },
+      },
+    },
+
+    // drop theatre if movie not found
+    { $match: { movies: { $ne: [] } } },
+
+    /**
+     * OPTIONAL: populate the single movie
+     * (since aggregate doesn't support populate)
+     */
+    {
+      $lookup: {
+        from: "movies",
+        localField: "movies",
+        foreignField: "_id",
+        as: "movies",
+      },
+    },
+  ];
+
+  const result = await Theatre.aggregate(pipeline);
+
+  if (result.length === 0) {
+    const err = new Error("Theatre or Movie not found");
+    err.statusCode = 404;
+    throw err;
+  }
+
+  return result[0];
 };
+
 export default {
   createTheatre,
   DeleteTheatre,
