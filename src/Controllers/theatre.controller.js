@@ -146,7 +146,7 @@ const theatreMoviesController = async (req, res) => {
     const UpdatedTheatre = await theatreService.TheatreMoviesService(
       theatreID,
       movies,
-      insert
+      insert,
     );
 
     res.status(200).json(UpdatedTheatre);
@@ -156,10 +156,32 @@ const theatreMoviesController = async (req, res) => {
     });
   }
 };
+const moviesInTheatre = async (req, res) => {
+  try {
+    const theatreID = req.params.id;
+
+    if (!theatreID) {
+      const err = new Error("Invalid Fields");
+      err.statusCode = 403;
+      err.success = false;
+      throw err;
+    }
+    const theatre = await theatreService.getMoviesInTheatre(theatreID);
+
+    return res.status(200).json({
+      theatre,
+    });
+  } catch (err) {
+    return res.status(err.statusCode).json({
+      err,
+    });
+  }
+};
 export {
   createTheatre,
   getTheatres,
   deleteTheatres,
   theatreMoviesController,
   updateTheatre,
+  moviesInTheatre,
 };

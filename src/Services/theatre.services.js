@@ -68,7 +68,7 @@ const TheatreMoviesService = async (theatreID, movies, insert) => {
           movies: { $in: movies },
         },
       },
-      { new: true }
+      { new: true },
     );
   } else {
     theatre = await Theatre.findByIdAndUpdate(
@@ -78,7 +78,7 @@ const TheatreMoviesService = async (theatreID, movies, insert) => {
           movies: { $each: movies },
         },
       },
-      { new: true }
+      { new: true },
     );
   }
 
@@ -99,10 +99,24 @@ const updateTheatre = async (theatreID, data) => {
 
   return await theatre.populate("movies");
 };
+const getMoviesInTheatre = async (theatreID) => {
+  const theatre = await Theatre.findById(theatreID, {
+    name: 1,
+    city: 1,
+    pincode: 1,
+    movies: 1,
+  }).populate("movies");
+  if (!theatre) {
+    throw new Error("No Theatre Found");
+  }
+
+  return theatre;
+};
 export default {
   createTheatre,
   DeleteTheatre,
   FetchTheatre,
   TheatreMoviesService,
   updateTheatre,
+  getMoviesInTheatre,
 };
