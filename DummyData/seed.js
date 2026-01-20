@@ -58,7 +58,7 @@ async function seed() {
           $addToSet: {
             movies: { $each: randomMovies },
           },
-        }
+        },
       );
     }
 
