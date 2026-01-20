@@ -14,6 +14,7 @@ router.route("/theatres")
 router.route("/theatres/:id")
 .patch(updateTheatre)
 .delete(deleteTheatres);
+router.route("/theatres/:id/movies")
 router.patch("/theatres/:id/add/movies", theatreMoviesController);
 
 export default router;
