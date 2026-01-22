@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 const ROLES = Object.freeze({
-  CUSTOMER: "Customer",
+  USER: "User",
+  CLIENT: "Client",
   ADMIN: "Admin",
   MODERATOR: "Moderator",
 });
@@ -12,7 +13,6 @@ const UserSchema = new mongoose.Schema(
     },
 
     email: {
-        
       type: String,
       unique: true,
       required: true,
@@ -27,7 +27,7 @@ const UserSchema = new mongoose.Schema(
     role: {
       type: String,
       enum: Object.values(ROLES),
-      default: ROLES.CUSTOMER,
+      default: ROLES.USER,
     },
     userStatus: {
       type: String,
