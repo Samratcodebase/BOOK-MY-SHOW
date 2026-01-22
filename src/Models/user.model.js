@@ -1,5 +1,9 @@
 import mongoose from "mongoose";
-
+const ROLES = Object.freeze({
+  CUSTOMER: "Customer",
+  ADMIN: "Admin",
+  MODERATOR: "Moderator",
+});
 const UserSchema = new mongoose.Schema({
   username: {
     type: String,
