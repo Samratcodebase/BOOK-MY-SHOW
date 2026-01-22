@@ -1,9 +1,9 @@
 import User from "../Models/user.model.js";
 import bcrypt from "bcryptjs";
 const createUser = async (username, email, password) => {
-  const hashedPassword = await bcrypt.hash(password, 10);
+  password = await bcrypt.hash(password, 10);
 
-  const user = User.create({ username, email, hashedPassword });
+  const user = User.create({ username, email, password });
 
   if (!user) {
     const error = new Error("Internal Service Error");
