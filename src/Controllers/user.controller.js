@@ -5,7 +5,7 @@ const signUp = async (req, res) => {
 
     if (!username || !email || !password) {
       const error = new Error("All Fileds Required");
-      error.statuscode = 401;
+      error.statusCode = 401;
       error.success = false;
       throw error;
     }
@@ -14,13 +14,16 @@ const signUp = async (req, res) => {
 
     return res.status(201).json({
       Message: "User Registration SuccessFull",
-      Success: True,
+      Success: true,
       Data: User,
     });
   } catch (error) {
-    return res.status(error.statuscode).json({
-      Message: error.Message,
-      Success: error.success,
+    const statusCode = Number(error && error.statusCode) || 500;
+    const success =
+    typeof (error && error.success) === "boolean" ? error.success : false;
+    return res.status(statusCode).json({
+      Message: error && error.message ? error.message : "Internal Server Error",
+      Success: success,
     });
   }
 };
