@@ -33,8 +33,6 @@ const loginUser = async (email, password) => {
     throw error;
   }
 
-  console.log(user.password);
-
   const isMatched = await bcrypt.compare(password, user.password);
 
   if (!isMatched) {
