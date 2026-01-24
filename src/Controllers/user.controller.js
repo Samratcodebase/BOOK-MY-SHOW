@@ -41,8 +41,20 @@ const singIn = async (req, res) => {
 
     const User = await userService.loginUser(email, password);
 
-    return User;
-  } catch (error) {}
+    return res.status(200).json({
+      Message: "User Retrival SuccessFull",
+      Success: true,
+      Data: User,
+    });
+  } catch (error) {
+    const statusCode = Number(error && error.statusCode) || 500;
+    const success =
+      typeof (error && error.success) === "boolean" ? error.success : false;
+    return res.status(statusCode).json({
+      Message: error && error.message ? error.message : "Internal Server Error",
+      Success: success,
+    });
+  }
 };
 
 export default { signUp, singIn };
