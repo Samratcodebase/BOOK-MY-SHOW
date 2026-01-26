@@ -9,8 +9,6 @@ const createUser = async (username, email, password) => {
     throw error;
   }
 
-  password = await bcrypt.hash(password, 10);
-
   const user = await User.create({ username, email, password });
 
   if (!user) {
