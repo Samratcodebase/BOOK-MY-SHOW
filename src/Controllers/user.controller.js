@@ -3,13 +3,6 @@ const signUp = async (req, res) => {
   try {
     const { username, email, password } = req.body;
 
-    if (!username || !email || !password) {
-      const error = new Error("All Fileds Required");
-      error.statusCode = 401;
-      error.success = false;
-      throw error;
-    }
-
     const User = await userService.createUser(username, email, password);
 
     return res.status(201).json({
