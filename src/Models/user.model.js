@@ -46,4 +46,12 @@ UserSchema.pre("save", async function () {
   this.password = await bcrypt.hash(this.password, salt);
 });
 
+UserSchema.methods.comparePassword = async function (password) {
+  if (!this.password) {
+    throw new Error("Password hash not present on user document");
+  }
+
+  return await bcrypt.compare(password, this.password);
+};
+
 export default mongoose.model("User", UserSchema);

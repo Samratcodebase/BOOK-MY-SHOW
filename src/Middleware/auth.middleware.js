@@ -1,3 +1,4 @@
+import jwt from "jsonwebtoken";
 const ValidateSignUpRequest = (req, res, next) => {
   const { username, email, password } = req.body;
 
@@ -37,4 +38,20 @@ const ValidateSignUpRequest = (req, res, next) => {
   next();
 };
 
-export default ValidateSignUpRequest;
+const isAuthenticated = (req, res, next) => {
+  try {
+    const token = req.headers["x-access-token"];
+
+    const response = jwt.verify(token, process.env.JWT_SECRET);
+
+    req.user = response;
+    next();
+  } catch (error) {
+    return res.status(400).json({
+      Error: error.name,
+      message: error.message,
+      stack: error.stack,
+    });
+  }
+};
+export default { ValidateSignUpRequest, isAuthenticated };
