@@ -32,12 +32,13 @@ const singIn = async (req, res) => {
       throw error;
     }
 
-    const User = await userService.loginUser(email, password);
+    const { user, token } = await userService.loginUser(email, password);
 
     return res.status(200).json({
       Message: "User Retrival SuccessFull",
       Success: true,
-      Data: User,
+      Data: user,
+      token,
     });
   } catch (error) {
     const statusCode = Number(error && error.statusCode) || 500;
