@@ -1,13 +1,19 @@
 import User from "../Models/user.model.js";
-import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 const createUser = async (username, email, password) => {
-  const hashedPassword = await bcrypt.hash(password, 10);
+  const isExists = await User.findOne({ email });
+  if (isExists) {
+    const error = new Error("User Already Exists");
+    error.statusCode = 409;
+    error.success = false;
+    throw error;
+  }
 
-  const user = User.create({ username, email, hashedPassword });
+  const user = await User.create({ username, email, password });
 
   if (!user) {
     const error = new Error("Internal Service Error");
-    error.statuscode = 404;
+    error.statusCode = 500;
     error.success = false;
     throw error;
   }
@@ -15,4 +21,40 @@ const createUser = async (username, email, password) => {
   return user;
 };
 
-export default { createUser };
+const loginUser = async (email, password) => {
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    const error = new Error("Invalid Credentials");
+    error.statusCode = 409;
+    error.success = false;
+    throw error;
+  }
+
+  const isMatched = await user.comparePassword(password);
+
+  if (!isMatched) {
+    const error = new Error("Invalid Credentials");
+    error.statusCode = 409;
+    error.success = false;
+    throw error;
+  }
+  const token = jwt.sign(
+    { id: user._id, email: user.email },
+    process.env.JWT_SECRET,
+    { expiresIn: "1h" },
+  );
+  console.log(jwt.verify(token, process.env.JWT_SECRET));
+
+  return {
+    user: {
+      id: user._id,
+      username: user.username,
+      email: user.email,
+    },
+
+    token,
+  };
+};
+
+export default { createUser, loginUser };
