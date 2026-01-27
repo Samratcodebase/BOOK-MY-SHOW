@@ -1,16 +1,35 @@
+// ===========================
+// USER SERVICE MODULE
+// ===========================
+// This module handles user-related business logic including user creation and authentication
+
 import User from "../Models/user.model.js";
 import jwt from "jsonwebtoken";
+
+/**
+ * CREATE USER SERVICE
+ * Creates a new user account with the provided credentials
+ * @param {string} username - The username for the new user
+ * @param {string} email - The email address of the user
+ * @param {string} password - The password for the user account
+ * @returns {Promise<Object>} The created user object
+ * @throws {Error} If user already exists (409) or creation fails (500)
+ */
 const createUser = async (username, email, password) => {
+  // Check if user with this email already exists
   const isExists = await User.findOne({ email });
   if (isExists) {
+    // Throw 409 Conflict error if user already exists
     const error = new Error("User Already Exists");
     error.statusCode = 409;
     error.success = false;
     throw error;
   }
 
+  // Create new user document in database
   const user = await User.create({ username, email, password });
 
+  // Throw 500 error if user creation fails
   if (!user) {
     const error = new Error("Internal Service Error");
     error.statusCode = 500;
@@ -18,43 +37,64 @@ const createUser = async (username, email, password) => {
     throw error;
   }
 
+  // Return the newly created user
   return user;
 };
 
+/**
+ * LOGIN USER SERVICE
+ * Authenticates a user and generates a JWT token
+ * @param {string} email - The user's email address
+ * @param {string} password - The user's password
+ * @returns {Promise<Object>} Object containing user info and JWT token
+ * @throws {Error} If user not found (409) or password doesn't match (409)
+ */
 const loginUser = async (email, password) => {
+  // Find user by email address
   const user = await User.findOne({ email });
 
+  // Return error if user not found
   if (!user) {
+    // Throw 409 error if user not found
     const error = new Error("Invalid Credentials");
     error.statusCode = 409;
     error.success = false;
     throw error;
   }
 
+  // Verify password against stored hash using model method
   const isMatched = await user.comparePassword(password);
 
+  // Return error if password doesn't match
   if (!isMatched) {
     const error = new Error("Invalid Credentials");
     error.statusCode = 409;
     error.success = false;
     throw error;
   }
+
+  // Generate JWT token with 1 hour expiration
   const token = jwt.sign(
     { id: user._id, email: user.email },
     process.env.JWT_SECRET,
     { expiresIn: "1h" },
   );
+
+  // Verify token and log decoded payload for debugging
   console.log(jwt.verify(token, process.env.JWT_SECRET));
 
+  // Return user data and token
   return {
+    // User information object
     user: {
       id: user._id,
       username: user.username,
       email: user.email,
     },
-
+    // JWT authentication token
     token,
   };
 };
 
+// Export user service functions
 export default { createUser, loginUser };
