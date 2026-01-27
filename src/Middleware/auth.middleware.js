@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+
 const ValidateSignUpRequest = (req, res, next) => {
   const { username, email, password } = req.body;
 
@@ -54,4 +55,5 @@ const isAuthenticated = (req, res, next) => {
     });
   }
 };
+
 export default { ValidateSignUpRequest, isAuthenticated };
