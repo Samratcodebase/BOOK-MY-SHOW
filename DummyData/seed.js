@@ -2,20 +2,21 @@ import fs from "fs";
 import mongoose from "mongoose";
 
 // 🔧 CONFIG
-const MONGO_URI = "mongodb://localhost:27017/BookMyShow";
-const MOVIES_FILE = "./BookMyShow.movies.json";
-const THEATRES_FILE = "./BookMyShow.theatres.json";
+const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/BookMyShow";
+const MOVIES_FILE = process.env.MOVIES_FILE || "./BookMyShow.movies.json";
+const THEATRES_FILE = process.env.THEATRES_FILE || "./BookMyShow.theatres.json";
 
-const MIN_MOVIES = 3;
-const MAX_MOVIES = 6;
+const MIN_MOVIES = process.env.MIN_MOVIES || 3;
+const MAX_MOVIES = process.env.MAX_MOVIES || 6;
 
 // ---------- HELPERS ----------
 
 // Convert { "$oid": "..." } → ObjectId
 const toObjectId = (oidObj) => new mongoose.Types.ObjectId(oidObj.$oid);
 
-// Pick N random unique items
+// Pick N random unique items from array
 function getRandomSubset(arr, count) {
+  if (count > arr.length) count = arr.length;
   return arr
     .slice()
     .sort(() => 0.5 - Math.random())
@@ -43,7 +44,8 @@ async function seed() {
       throw new Error("Not enough movies to assign");
     }
 
-    // 3️⃣ Update theatres
+    // 3️⃣ Update theatres with random movie assignments
+    console.log(`📽️ Assigning movies to ${theatresRaw.length} theatres...`);
     for (const theatre of theatresRaw) {
       const theatreId = toObjectId(theatre._id);
 
