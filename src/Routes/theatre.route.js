@@ -11,6 +11,7 @@ import {
   updateTheatre,
   moviesInTheatre,
 } from "../Controllers/theatre.controller.js";
+import AuthMiddleware from "../Middleware/auth.middleware.js";
 import express from "express";
 
 // Initialize Express router
@@ -20,7 +21,10 @@ const router = express.Router();
  * GET /theatres - Fetch all theatres with filters
  * POST /theatres - Create a new theatre
  */
-router.route("/theatres").get(getTheatres).post(createTheatre);
+router
+  .route("/theatres")
+  .get(AuthMiddleware.isAuthenticated, getTheatres)
+  .post(createTheatre);
 
 /**
  * PATCH /theatres/:id - Update theatre details (name, description, etc.)

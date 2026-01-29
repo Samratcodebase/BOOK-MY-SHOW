@@ -5,6 +5,7 @@
 
 import express from "express";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 import HealthCheckRouter from "./Routes/healthCheck.route.js";
 import MoiveBookingRouter from "./Routes/moive.route.js";
 import TheatreRouter from "./Routes/theatre.route.js";
@@ -20,7 +21,11 @@ const app = express();
  */
 const corsOptions = {
   // Allow requests from frontend applications on these origins
-  origin: ["http://localhost:5173", "http://localhost:3000", "http://localhost:3001"],
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "http://localhost:3001",
+  ],
   // Allow credentials (cookies, authorization headers) in cross-origin requests
   credentials: true,
   // Allow these HTTP methods in cross-origin requests
@@ -41,7 +46,8 @@ app.use(cors(corsOptions));
 app.use(express.json());
 // Parse incoming URL-encoded request bodies (form data)
 app.use(express.urlencoded({ extended: true }));
-
+// Parse Cookie header and populate req.cookies
+app.use(cookieParser());
 /**
  * API ROUTES REGISTRATION
  * Mount route handlers for different API endpoints

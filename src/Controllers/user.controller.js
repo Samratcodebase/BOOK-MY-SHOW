@@ -64,12 +64,17 @@ const singIn = async (req, res) => {
     // Call service to authenticate user and get token
     const { user, token } = await userService.loginUser(email, password);
 
+    res.cookie("jwt", token, {
+      httpOnly: true, // JS can't access it (XSS protection)
+      secure: true, // HTTPS only (MANDATORY in prod)
+      sameSite: "strict", // CSRF protection
+      maxAge: 24 * 60 * 60 * 1000, // 1 day (ms)
+    });
     // Return 200 OK status with user data and JWT token
     return res.status(200).json({
       Message: "User Retrival SuccessFull",
       Success: true,
       Data: user,
-      token,
     });
   } catch (error) {
     // Extract status code from error object, default to 500 if not present
@@ -85,5 +90,18 @@ const singIn = async (req, res) => {
   }
 };
 
+const logOut = async (req, res) => {
+  try {
+    req.cookie.jwt = " ";
+    res.status(200).json({
+      message: "Log Out Sucessfull",
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal Server Error",
+    });
+  }
+};
+
 // Export user controller functions
-export default { signUp, singIn };
+export default { signUp, singIn, logOut };
