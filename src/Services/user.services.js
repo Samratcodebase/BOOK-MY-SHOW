@@ -96,5 +96,26 @@ const loginUser = async (email, password) => {
   };
 };
 
+const passwordReset = async (oldpassword, newpassword, id) => {
+  const user = await User.findById(id);
+  if (!user) {
+    const err = new Error("Invalid credentials");
+    err.statusCode = 401;
+    throw err;
+  }
+
+  const isMatched = await user.comparePassword(oldpassword);
+  if (!isMatched) {
+    const err = new Error("Invalid credentials");
+    err.statusCode = 401;
+    throw err;
+  }
+
+  user.password = newpassword; // hashed via pre-save hook
+  await user.save();
+
+  return { success: true };
+};
+
 // Export user service functions
-export default { createUser, loginUser };
+export default { createUser, loginUser, passwordReset };

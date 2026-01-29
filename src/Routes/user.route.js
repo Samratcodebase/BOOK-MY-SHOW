@@ -36,6 +36,6 @@ router.get("/login", userController.singIn);
  */
 
 router.get("/logout", userController.logOut);
-
+router.post("/resetpassword", userController.PasswordReset);
 // Export router with all user routes
 export default router;
