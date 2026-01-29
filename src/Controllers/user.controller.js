@@ -4,7 +4,7 @@
 // This module handles user-related HTTP request handlers for signup and login operations
 
 import userService from "../Services/user.services.js";
-
+import jwt from "jsonwebtoken";
 /**
  * SIGN UP CONTROLLER
  * Handles user registration request
@@ -103,5 +103,42 @@ const logOut = async (req, res) => {
   }
 };
 
+const PasswordReset = async (req, res) => {
+  try {
+    const { oldpassword, newpassword } = req.body;
+    const token = req.cookies.jwt;
+
+    if (!token) {
+      return res.status(401).json({ message: "Authentication required" });
+    }
+
+    let decoded;
+    try {
+      decoded = jwt.verify(token, process.env.JWT_SECRET);
+    } catch {
+      return res.status(401).json({ message: "Invalid or expired token" });
+    }
+
+    const userId = decoded.id || decoded.userId;
+    if (!userId) {
+      return res.status(401).json({ message: "Invalid token payload" });
+    }
+
+    await userService.passRest(oldpassword, newpassword, userId);
+
+    // Invalidate session
+    res.clearCookie("jwt");
+
+    return res.status(200).json({
+      message: "Password reset successful. Please login again.",
+    });
+  } catch (error) {
+    return res.status(error.statusCode || 500).json({
+      message: error.message || "Internal Server Error",
+      success: false,
+    });
+  }
+};
+
 // Export user controller functions
-export default { signUp, singIn, logOut };
+export default { signUp, singIn, logOut, PasswordReset };
