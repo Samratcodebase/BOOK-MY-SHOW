@@ -5,6 +5,7 @@
 
 import mongoose, { Error } from "mongoose";
 import Movie from "../Models/movie.model.js";
+import { statusCode } from "../Utils/constant.js";
 
 /**
  * CREATE MOVIE SERVICE
@@ -155,7 +156,7 @@ const getMoviesByName = async (movieName) => {
     // Throw 404 error if no movies match
     const err = new Error("No Matching Movie Found ");
     err.success = false;
-    err.statusCode = 404;
+    err.statusCode = statusCode.NOT_FOUND;
     throw err;
   }
 

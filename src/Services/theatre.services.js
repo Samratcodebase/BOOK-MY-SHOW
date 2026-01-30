@@ -5,6 +5,7 @@
 
 import Theatre from "../Models/theatre.model.js";
 import mongoose from "mongoose";
+import { statusCode } from "../Utils/constant.js";
 
 /**
  * CREATE THEATRE SERVICE
@@ -54,7 +55,7 @@ const DeleteTheatre = async (theatreID) => {
   if (!deletedTheatre) {
     // Throw error if theatre not found or deletion fails
     const error = new Error("Internal Service Error");
-    error.statusCode = 500;
+    error.statusCode = statusCode.INTERNAL_SERVER_ERROR;
     throw error;
   }
 
@@ -77,7 +78,7 @@ const FetchTheatre = async (query) => {
   if (!theatres.length) {
     // Throw 404 error if no theatres match the query
     const error = new Error("Theatre not found");
-    error.statusCode = 404;
+    error.statusCode = statusCode.NOT_FOUND;
     throw error;
   }
 
@@ -190,7 +191,7 @@ const getMoviesInTheatre = async (theatreID, movieID) => {
     if (!theatre) {
       // Throw error if theatre not found
       const err = new Error("Theatre not found");
-      err.statusCode = 404;
+      err.statusCode = statusCode.NOT_FOUND;
       throw err;
     }
 
@@ -243,7 +244,7 @@ const getMoviesInTheatre = async (theatreID, movieID) => {
   if (result.length === 0) {
     // Throw error if theatre or movie not found
     const err = new Error("Theatre or Movie not found");
-    err.statusCode = 404;
+    err.statusCode = statusCode.NOT_FOUND;
     throw err;
   }
 

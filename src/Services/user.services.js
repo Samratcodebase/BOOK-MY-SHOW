@@ -22,7 +22,7 @@ const createUser = async (username, email, password) => {
   if (isExists) {
     // Throw 409 Conflict error if user already exists
     const error = new Error("User Already Exists");
-    error.statusCode = 409;
+    error.statusCode = statusCode.CONFLICT;
     error.success = false;
     throw error;
   }
@@ -33,7 +33,7 @@ const createUser = async (username, email, password) => {
   // Throw 500 error if user creation fails
   if (!user) {
     const error = new Error("Internal Service Error");
-    error.statusCode = 500;
+    error.statusCode = statusCode.INTERNAL_SERVER_ERROR;
     error.success = false;
     throw error;
   }
@@ -56,9 +56,9 @@ const loginUser = async (email, password) => {
 
   // Return error if user not found
   if (!user) {
-    // Throw 409 error if user not found
+    // Throw 401 error if user not found
     const error = new Error("Invalid Credentials");
-    error.statusCode = 409;
+    error.statusCode = statusCode.UNAUTHORISED;
     error.success = false;
     throw error;
   }
@@ -69,7 +69,7 @@ const loginUser = async (email, password) => {
   // Return error if password doesn't match
   if (!isMatched) {
     const error = new Error("Invalid Credentials");
-    error.statusCode = 409;
+    error.statusCode = statusCode.UNAUTHORISED;
     error.success = false;
     throw error;
   }
