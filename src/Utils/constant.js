@@ -5,4 +5,13 @@ const ROLES = Object.freeze({
   MODERATOR: "Moderator",
 });
 
-export { ROLES };
+const statusCode = Object.freeze({
+  OK: 200,
+  INTERNAL_SERVER_ERROR: 500,
+  CREATED: 201,
+  UNAUTHORISED: 401,
+  NOT_FOUND: 404,
+  BAD_REQUEST: 400,
+});
+
+export { ROLES, statusCode };

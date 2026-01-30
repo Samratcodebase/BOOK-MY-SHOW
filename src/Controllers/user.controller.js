@@ -4,6 +4,7 @@
 // This module handles user-related HTTP request handlers for signup and login operations
 
 import userService from "../Services/user.services.js";
+import { statusCode } from "../Utils/constant.js";
 import jwt from "jsonwebtoken";
 /**
  * SIGN UP CONTROLLER
@@ -21,7 +22,7 @@ const signUp = async (req, res) => {
     const User = await userService.createUser(username, email, password);
 
     // Return 201 Created status with new user data
-    return res.status(201).json({
+    return res.status(statusCode.CREATED).json({
       Message: "User Registration SuccessFull",
       Success: true,
       Data: User,
@@ -56,7 +57,7 @@ const singIn = async (req, res) => {
     if (!email || !password) {
       // Throw error if required fields are missing
       const error = new Error("All Fileds Required");
-      error.statusCode = 401;
+      error.statusCode = statusCode.UNAUTHORISED;
       error.success = false;
       throw error;
     }
@@ -71,14 +72,15 @@ const singIn = async (req, res) => {
       maxAge: 24 * 60 * 60 * 1000, // 1 day (ms)
     });
     // Return 200 OK status with user data and JWT token
-    return res.status(200).json({
+    return res.status(statusCode.OK).json({
       Message: "User Retrival SuccessFull",
       Success: true,
       Data: user,
     });
   } catch (error) {
     // Extract status code from error object, default to 500 if not present
-    const statusCode = Number(error && error.statusCode) || 500;
+    const statusCode =
+      Number(error && error.statusCode) || statusCode.INTERNAL_SERVER_ERROR;
     // Extract success flag from error object, default to false if not boolean
     const success =
       typeof (error && error.success) === "boolean" ? error.success : false;
@@ -93,11 +95,11 @@ const singIn = async (req, res) => {
 const logOut = async (req, res) => {
   try {
     req.cookie.jwt = " ";
-    res.status(200).json({
+    res.status(statusCode.OK).json({
       message: "Log Out Sucessfull",
     });
   } catch (error) {
-    res.status(500).json({
+    res.status(statusCode.INTERNAL_SERVER_ERROR).json({
       message: "Internal Server Error",
     });
   }
