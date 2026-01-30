@@ -4,6 +4,8 @@
 // This module provides middleware functions for user authentication and signup request validation
 
 import jwt from "jsonwebtoken";
+import User from "../Models/user.model.js";
+import ROLES from "../Utils/roles.js";
 
 /**
  * VALIDATE SIGNUP REQUEST MIDDLEWARE
@@ -75,6 +77,7 @@ const isAuthenticated = (req, res, next) => {
 
     // Verify token signature and decode payload using JWT_SECRET
     const response = jwt.verify(token, process.env.JWT_SECRET);
+    console.log(response);
 
     // Attach decoded user data to request object for use in controllers
     req.user = response;
@@ -90,5 +93,24 @@ const isAuthenticated = (req, res, next) => {
   }
 };
 
+const isAdmin = async (req, res, next) => {
+  try {
+    const ID = req.user.id;
+    const isAdmin = await User.findOne({ _id: ID, role: ROLES.ADMIN });
+    if (!isAdmin) {
+      return res.status(403).json({
+        message: "Only Admins are Allowed",
+      });
+    }
+
+    next();
+  } catch (error) {
+    return res.status(400).json({
+      Error: error.name,
+      message: error.message,
+    });
+  }
+};
+
 // Export authentication middleware functions
-export default { ValidateSignUpRequest, isAuthenticated };
+export default { ValidateSignUpRequest, isAuthenticated, isAdmin };
