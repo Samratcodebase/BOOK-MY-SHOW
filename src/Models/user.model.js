@@ -5,17 +5,7 @@
 
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
-
-/**
- * ROLE CONSTANTS
- * Defines available user roles for access control and permissions
- */
-const ROLES = Object.freeze({
-  USER: "User",
-  CLIENT: "Client",
-  ADMIN: "Admin",
-  MODERATOR: "Moderator",
-});
+import ROLES from "../Utils/roles.js";
 
 /**
  * USER SCHEMA
