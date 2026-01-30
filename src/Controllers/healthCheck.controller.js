@@ -3,6 +3,8 @@
 // ===========================
 // This module provides a simple health check endpoint to verify API server status and connectivity
 
+import { statusCode } from "../Utils/constant.js";
+
 /**
  * HEALTH CHECK CONTROLLER
  * Verifies that the API server is running and accessible
@@ -13,7 +15,7 @@
  */
 const HealthCheck = async (req, res) => {
   // Return 200 OK status with health check message
-  res.status(200).json({
+  res.status(statusCode.OK).json({
     message: "Server Health Is Ok : 200",
   });
 };

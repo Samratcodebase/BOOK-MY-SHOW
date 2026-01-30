@@ -5,6 +5,7 @@
 
 import Movie from "../Models/movie.model.js";
 import MovieService from "../Services/moive.services.js";
+import { statusCode } from "../Utils/constant.js";
 
 /**
  * CREATE MOVIES CONTROLLER
@@ -19,14 +20,14 @@ const CreateMovies = async (req, res) => {
     const movie = await MovieService.createMovie(req.body);
 
     // Return 201 Created status with new movie data
-    return res.status(201).json({
+    return res.status(statusCode.CREATED).json({
       success: true,
       message: "Movie created successfully",
       data: movie,
     });
   } catch (error) {
     // Return error response with status code from error or default 500
-    return res.status(error.statusCode || 500).json({
+    return res.status(error.statusCode || statusCode.INTERNAL_SERVER_ERROR).json({
       success: false,
       message: error.message || "Internal Server Error",
     });
@@ -48,7 +49,7 @@ const deleteMovie = async (req, res) => {
     // Validate that movie ID is provided
     if (!id) {
       // Return 400 error if ID is missing
-      return res.status(400).json({
+      return res.status(statusCode.BAD_REQUEST).json({
         success: false,
         message: "Movie ID is required",
       });
@@ -58,21 +59,21 @@ const deleteMovie = async (req, res) => {
     const deletedMoive = await MovieService.deleteMovieById(id);
 
     // Return 200 OK with deleted movie data
-    return res.status(200).json({
+    return res.status(statusCode.OK).json({
       success: true,
       message: "Movie deleted successfully",
       Data: deletedMoive,
     });
   } catch (error) {
     // Determine status code based on error message
-    const statusCode =
+    const code =
       error.message === "Movie not found" ||
       error.message === "Invalid Movie ID"
-        ? 404
-        : 500;
+        ? statusCode.NOT_FOUND
+        : statusCode.INTERNAL_SERVER_ERROR;
 
     // Return error response with appropriate status code
-    return res.status(statusCode).json({
+    return res.status(code).json({
       success: false,
       message: error.message,
     });
@@ -96,7 +97,7 @@ const MoviesByName = async (req, res) => {
     const movies = await MovieService.getMoviesByName(movieName);
 
     // Return 200 OK with matching movies
-    return res.status(200).json({
+    return res.status(statusCode.OK).json({
       success: true,
       message: "Movies fetched successfully",
       data: movies,
@@ -136,7 +137,7 @@ const updateMovie = async (req, res) => {
     // Validate that both ID and data are provided
     if (!id || !data) {
       // Return 400 error if required fields are missing
-      return res.status(400).json({
+      return res.status(statusCode.BAD_REQUEST).json({
         success: false,
         message: "Movie ID and data are required",
       });
@@ -146,14 +147,14 @@ const updateMovie = async (req, res) => {
     const updatedMovie = await MovieService.updateMovie(id, data);
 
     // Return 200 OK with updated movie data
-    return res.status(200).json({
+    return res.status(statusCode.OK).json({
       success: true,
       message: "Movie updated successfully",
       data: updatedMovie,
     });
   } catch (error) {
     // Return 500 error with error message
-    return res.status(500).json({
+    return res.status(statusCode.INTERNAL_SERVER_ERROR).json({
       success: false,
       message: error.message,
     });

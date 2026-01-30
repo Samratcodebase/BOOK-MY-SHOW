@@ -12,6 +12,7 @@ const statusCode = Object.freeze({
   UNAUTHORISED: 401,
   NOT_FOUND: 404,
   BAD_REQUEST: 400,
+  FORBIDDEN: 403,
 });
 
 export { ROLES, statusCode };

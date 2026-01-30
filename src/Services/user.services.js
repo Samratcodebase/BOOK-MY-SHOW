@@ -5,6 +5,7 @@
 
 import User from "../Models/user.model.js";
 import jwt from "jsonwebtoken";
+import { statusCode } from "../Utils/constant.js";
 
 /**
  * CREATE USER SERVICE
@@ -100,14 +101,14 @@ const passwordReset = async (oldpassword, newpassword, id) => {
   const user = await User.findById(id);
   if (!user) {
     const err = new Error("Invalid credentials");
-    err.statusCode = 401;
+    err.statusCode = statusCode.UNAUTHORISED;
     throw err;
   }
 
   const isMatched = await user.comparePassword(oldpassword);
   if (!isMatched) {
     const err = new Error("Invalid credentials");
-    err.statusCode = 401;
+    err.statusCode = statusCode.UNAUTHORISED;
     throw err;
   }
 

@@ -5,7 +5,7 @@
 
 import jwt from "jsonwebtoken";
 import User from "../Models/user.model.js";
-import { ROLES } from "../Utils/constant.js";
+import { ROLES, statusCode } from "../Utils/constant.js";
 
 /**
  * VALIDATE SIGNUP REQUEST MIDDLEWARE
@@ -21,7 +21,7 @@ const ValidateSignUpRequest = (req, res, next) => {
   // Check if all required fields are present
   if (!username || !email || !password) {
     // Return 400 error if any required field is missing
-    return res.status(400).json({
+    return res.status(statusCode.BAD_REQUEST).json({
       success: false,
       message: "username, email, and password are required",
     });
@@ -34,7 +34,7 @@ const ValidateSignUpRequest = (req, res, next) => {
     typeof password !== "string"
   ) {
     // Return 400 error if any field has invalid data type
-    return res.status(400).json({
+    return res.status(statusCode.BAD_REQUEST).json({
       success: false,
       message: "Invalid data types",
     });
@@ -44,7 +44,7 @@ const ValidateSignUpRequest = (req, res, next) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     // Return 400 error if email format is invalid
-    return res.status(400).json({
+    return res.status(statusCode.BAD_REQUEST).json({
       success: false,
       message: "Invalid email format",
     });
@@ -53,7 +53,7 @@ const ValidateSignUpRequest = (req, res, next) => {
   // Validate password minimum length requirement
   if (password.length < 10) {
     // Return 400 error if password is less than 10 characters
-    return res.status(400).json({
+    return res.status(statusCode.BAD_REQUEST).json({
       success: false,
       message: "Password must be at least 10 characters long",
     });
@@ -85,7 +85,7 @@ const isAuthenticated = (req, res, next) => {
     next();
   } catch (error) {
     // Catch JWT validation errors and return error details
-    return res.status(400).json({
+    return res.status(statusCode.BAD_REQUEST).json({
       Error: error.name,
       message: error.message,
       stack: error.stack,
@@ -98,14 +98,14 @@ const isAdmin = async (req, res, next) => {
     const ID = req.user.id;
     const isAdmin = await User.findOne({ _id: ID, role: ROLES.ADMIN });
     if (!isAdmin) {
-      return res.status(403).json({
+      return res.status(statusCode.FORBIDDEN).json({
         message: "Only Admins are Allowed",
       });
     }
 
     next();
   } catch (error) {
-    return res.status(400).json({
+    return res.status(statusCode.BAD_REQUEST).json({
       Error: error.name,
       message: error.message,
     });

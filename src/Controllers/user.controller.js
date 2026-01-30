@@ -29,12 +29,12 @@ const signUp = async (req, res) => {
     });
   } catch (error) {
     // Extract status code from error object, default to 500 if not present
-    const statusCode = Number(error && error.statusCode) || 500;
+    const code = Number(error && error.statusCode) || statusCode.INTERNAL_SERVER_ERROR;
     // Extract success flag from error object, default to false if not boolean
     const success =
       typeof (error && error.success) === "boolean" ? error.success : false;
     // Return error response with appropriate status code and message
-    return res.status(statusCode).json({
+    return res.status(code).json({
       Message: error && error.message ? error.message : "Internal Server Error",
       Success: success,
     });
@@ -111,19 +111,19 @@ const PasswordReset = async (req, res) => {
     const token = req.cookies.jwt;
 
     if (!token) {
-      return res.status(401).json({ message: "Authentication required" });
+      return res.status(statusCode.UNAUTHORISED).json({ message: "Authentication required" });
     }
 
     let decoded;
     try {
       decoded = jwt.verify(token, process.env.JWT_SECRET);
     } catch {
-      return res.status(401).json({ message: "Invalid or expired token" });
+      return res.status(statusCode.UNAUTHORISED).json({ message: "Invalid or expired token" });
     }
 
     const userId = decoded.id || decoded.userId;
     if (!userId) {
-      return res.status(401).json({ message: "Invalid token payload" });
+      return res.status(statusCode.UNAUTHORISED).json({ message: "Invalid token payload" });
     }
 
     await userService.passRest(oldpassword, newpassword, userId);
@@ -131,11 +131,11 @@ const PasswordReset = async (req, res) => {
     // Invalidate session
     res.clearCookie("jwt");
 
-    return res.status(200).json({
+    return res.status(statusCode.OK).json({
       message: "Password reset successful. Please login again.",
     });
   } catch (error) {
-    return res.status(error.statusCode || 500).json({
+    return res.status(error.statusCode || statusCode.INTERNAL_SERVER_ERROR).json({
       message: error.message || "Internal Server Error",
       success: false,
     });

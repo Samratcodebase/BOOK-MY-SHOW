@@ -5,6 +5,7 @@
 
 import theatreService from "../Services/theatre.services.js";
 import moiveServices from "../Services/moive.services.js";
+import { statusCode } from "../Utils/constant.js";
 
 /**
  * CREATE THEATRE CONTROLLER
@@ -20,8 +21,8 @@ const createTheatre = async (req, res) => {
 
     // Validate that all required fields are provided
     if (!name || !description || !city || !pincode || !address) {
-      // Return 404 error if any required field is missing
-      res.status(404).json({
+      // Return 400 error if any required field is missing
+      res.status(statusCode.BAD_REQUEST).json({
         message: "All fileds are required",
         sucess: false,
       });
@@ -38,20 +39,20 @@ const createTheatre = async (req, res) => {
 
     if (!Theatre) {
       // Return 500 error if theatre creation fails
-      res.status(500).json({
+      res.status(statusCode.INTERNAL_SERVER_ERROR).json({
         message: "Internal Server Error",
         sucess: false,
       });
     }
 
     // Return 201 Created status with success message
-    return res.status(201).json({
+    return res.status(statusCode.CREATED).json({
       message: "Theater Creation SucessFull",
       sucess: true,
     });
   } catch (error) {
     // Return 500 error with error message
-    res.status(500).json({
+    res.status(statusCode.INTERNAL_SERVER_ERROR).json({
       message: error.message,
       sucess: true,
     });
@@ -96,13 +97,13 @@ const getTheatres = async (req, res) => {
     const data = await theatreService.FetchTheatre(query);
 
     // Return 200 OK with theatres data
-    return res.status(200).json({
+    return res.status(statusCode.OK).json({
       success: true,
       data,
     });
   } catch (error) {
     // Return error response with status code from error or default 500
-    return res.status(error.statusCode || 500).json({
+    return res.status(error.statusCode || statusCode.INTERNAL_SERVER_ERROR).json({
       success: false,
       message: error.message,
     });
@@ -133,7 +134,7 @@ const deleteTheatres = async (req, res) => {
     const removedTheatre = await theatreService.DeleteTheatre(theatreID);
 
     // Return 200 OK with deleted theatre data
-    return res.status(200).json({
+    return res.status(statusCode.OK).json({
       message: "Theatre Deleted  SucessFull",
       success: true,
       data: removedTheatre,
@@ -189,13 +190,13 @@ const updateTheatre = async (req, res) => {
     const UpdatedTheatre = await theatreService.updateTheatre(theatreID, data);
 
     // Return 200 OK with updated theatre data
-    return res.status(200).json({
+    return res.status(statusCode.OK).json({
       message: "Updattion Sucessfull",
       data: UpdatedTheatre,
     });
   } catch (error) {
     // Return 400 error with error details
-    return res.status(400).json({
+    return res.status(error.statusCode || statusCode.BAD_REQUEST).json({
       message: error.message,
       success: error.success,
     });
@@ -218,7 +219,7 @@ const theatreMoviesController = async (req, res) => {
     if (!theatreID) {
       // Create and throw error if ID is missing
       const error = new Error("Theatre ID is Missing");
-      error.statusCode = 401;
+      error.statusCode = statusCode.BAD_REQUEST;
       error.sucess = false;
       throw error;
     }
@@ -235,10 +236,10 @@ const theatreMoviesController = async (req, res) => {
     );
 
     // Return 200 OK with updated theatre data
-    res.status(200).json(UpdatedTheatre);
+    res.status(statusCode.OK).json(UpdatedTheatre);
   } catch (error) {
     // Return 500 error with error object
-    return res.status(500).json({
+    return res.status(statusCode.INTERNAL_SERVER_ERROR).json({
       error,
     });
   }
@@ -261,7 +262,7 @@ const moviesInTheatre = async (req, res) => {
     // Validate that theatre ID is provided
     if (!theatreID) {
       // Return 400 error if theatre ID is missing
-      return res.status(400).json({
+      return res.status(statusCode.BAD_REQUEST).json({
         message: "Theatre ID is required",
       });
     }
@@ -271,10 +272,10 @@ const moviesInTheatre = async (req, res) => {
     const theatre = await theatreService.getMoviesInTheatre(theatreID, movieID);
 
     // Return 200 OK with theatre and movies data
-    return res.status(200).json({ theatre });
+    return res.status(statusCode.OK).json({ theatre });
   } catch (err) {
     // Return error response with status code from error or default 500
-    return res.status(err.statusCode || 500).json({
+    return res.status(err.statusCode || statusCode.INTERNAL_SERVER_ERROR).json({
       message: err.message,
     });
   }
