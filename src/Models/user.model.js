@@ -5,7 +5,7 @@
 
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
-import ROLES from "../Utils/roles.js";
+import { ROLES } from "../Utils/constant.js";
 
 /**
  * USER SCHEMA

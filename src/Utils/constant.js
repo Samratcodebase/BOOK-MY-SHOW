@@ -5,4 +5,4 @@ const ROLES = Object.freeze({
   MODERATOR: "Moderator",
 });
 
-export default ROLES;
+export { ROLES };

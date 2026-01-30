@@ -5,7 +5,7 @@
 
 import jwt from "jsonwebtoken";
 import User from "../Models/user.model.js";
-import ROLES from "../Utils/roles.js";
+import { ROLES } from "../Utils/constant.js";
 
 /**
  * VALIDATE SIGNUP REQUEST MIDDLEWARE
