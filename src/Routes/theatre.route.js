@@ -30,19 +30,33 @@ router
  * PATCH /theatres/:id - Update theatre details (name, description, etc.)
  * DELETE /theatres/:id - Delete a theatre by ID
  */
-router.route("/theatres/:id").patch(updateTheatre).delete(deleteTheatres);
+router
+  .route("/theatres/:id")
+  .patch(AuthMiddleware.isAuthenticated, AuthMiddleware.isAdmin, updateTheatre)
+  .delete(
+    AuthMiddleware.isAuthenticated,
+    AuthMiddleware.isAdmin,
+    deleteTheatres,
+  );
 
 /**
  * GET /theatres/:id/movies - Get all movies in a specific theatre
  * Optionally filter by specific movie ID via query parameters
  */
-router.route("/theatres/:id/movies").get(moviesInTheatre);
+router
+  .route("/theatres/:id/movies")
+  .get(AuthMiddleware.isAuthenticated, moviesInTheatre);
 
 /**
  * PATCH /theatres/:id/add/movies - Add/remove movies in a theatre
  * Supports both adding and removing movies based on request body
  */
-router.patch("/theatres/:id/add/movies", theatreMoviesController);
+router.patch(
+  "/theatres/:id/add/movies",
+  AuthMiddleware.isAuthenticated,
+  AuthMiddleware.isAdmin,
+  theatreMoviesController,
+);
 
 // Export router with all theatre routes
 export default router;

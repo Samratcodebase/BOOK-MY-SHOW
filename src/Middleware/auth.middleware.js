@@ -75,9 +75,16 @@ const isAuthenticated = (req, res, next) => {
     // Extract JWT token from custom x-access-token header
     const token = req.headers["x-access-token"];
 
+    //If No token Found Throw Error
+    if (!token) {
+      const error = new Error("Unauthorised Access  Plse Login ");
+      error.statusCode = statusCode.BAD_REQUEST;
+      error.success = false;
+      throw error;
+    }
+
     // Verify token signature and decode payload using JWT_SECRET
     const response = jwt.verify(token, process.env.JWT_SECRET);
-    console.log(response);
 
     // Attach decoded user data to request object for use in controllers
     req.user = response;
@@ -85,10 +92,9 @@ const isAuthenticated = (req, res, next) => {
     next();
   } catch (error) {
     // Catch JWT validation errors and return error details
-    return res.status(statusCode.BAD_REQUEST).json({
+    return res.status(Number(error.statusCode || statusCode.BAD_REQUEST)).json({
       Error: error.name,
       message: error.message,
-      stack: error.stack,
     });
   }
 };
