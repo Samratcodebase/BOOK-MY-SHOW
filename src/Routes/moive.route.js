@@ -34,7 +34,12 @@ router.get("/movies", authMiddleware.isAuthenticated, MoviesByName);
  * URL parameter: id (MongoDB ObjectId)
  * Response: Deleted movie document
  */
-router.delete("/movies/:id", deleteMovie);
+router.delete(
+  "/movies/:id",
+  authMiddleware.isAuthenticated,
+  authMiddleware.isAdmin,
+  deleteMovie,
+);
 
 /**
  * PATCH /update - Update movie details
