@@ -46,7 +46,12 @@ router.delete(
  * Request body: movieID and fields to update (movieName, description, casts, trailerUrl, language, releaseDate, director)
  * Response: Updated movie document
  */
-router.patch("/update", updateMovie);
+router.patch(
+  "/update",
+  authMiddleware.isAuthenticated,
+  authMiddleware.isAdmin,
+  updateMovie,
+);
 
 // Export router with all movie routes
 export default router;
