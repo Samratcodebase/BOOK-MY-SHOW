@@ -16,4 +16,10 @@ const statusCode = Object.freeze({
   CONFLICT: 409,
 });
 
-export { ROLES, statusCode };
+const bookingStatus = Object.freeze({
+  IN_PROCESS: "In_Process",
+  CANCELED: "Cancled",
+  SUCCESSFULL: "Sucessfull",
+});
+
+export { ROLES, statusCode, bookingStatus };
