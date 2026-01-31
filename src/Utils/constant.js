@@ -27,4 +27,4 @@ const paymentStatus = Object.freeze({
   FAILED: "FAILED",
   SUCESS: "SUCCESS",
 });
-export { ROLES, statusCode, bookingStatus };
+export { ROLES, statusCode, bookingStatus, paymentStatus };

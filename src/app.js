@@ -11,6 +11,7 @@ import MoiveBookingRouter from "./Routes/moive.route.js";
 import TheatreRouter from "./Routes/theatre.route.js";
 import UserRouter from "./Routes/user.route.js";
 import AdminRouter from "./Routes/admin.route.js";
+import BookingRouter from "./Routes/booking.route.js";
 
 // Initialize Express application
 const app = express();
@@ -62,5 +63,6 @@ app.use("/api/v1/mba", TheatreRouter);
 // User authentication endpoints - signup and login
 app.use("/api/v1/auth", UserRouter);
 app.use("/api/v1/admin", AdminRouter);
+app.use("/api/v1/booking", BookingRouter);
 // Export configured Express application
 export default app;
