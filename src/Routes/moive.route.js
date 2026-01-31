@@ -20,7 +20,12 @@ const router = express.Router();
  * Request body: movieName, description, casts, trailerUrl, language, releaseDate, director, releaseStatus
  * Response: Created movie document
  */
-router.post("/movies", CreateMovies);
+router.post(
+  "/movies",
+  authMiddleware.isAuthenticated,
+  authMiddleware.isAdmin,
+  CreateMovies,
+);
 
 /**
  * GET /movies - Search movies by name
