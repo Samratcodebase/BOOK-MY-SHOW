@@ -22,4 +22,9 @@ const bookingStatus = Object.freeze({
   SUCCESSFULL: "Sucessfull",
 });
 
+const paymentStatus = Object.freeze({
+  PENDING: "PENDING",
+  FAILED: "FAILED",
+  SUCESS: "SUCCESS",
+});
 export { ROLES, statusCode, bookingStatus };
