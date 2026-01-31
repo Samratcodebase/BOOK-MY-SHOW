@@ -1,6 +1,5 @@
-import { request } from "express";
 import mongoose from "mongoose";
-
+import paymentStatus from "../Utils/constant.js";
 const paymentSchema = new mongoose.Schema(
   {
     bookingID: {
