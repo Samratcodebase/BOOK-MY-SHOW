@@ -10,6 +10,7 @@ import {
   deleteMovie,
   updateMovie,
 } from "../Controllers/moive.controller.js";
+import authMiddleware from "../Middleware/auth.middleware.js";
 
 // Initialize Express router
 const router = express.Router();
@@ -26,7 +27,7 @@ router.post("/movies", CreateMovies);
  * Query parameters: movieName (optional, case-insensitive search)
  * Response: Array of matching movie documents
  */
-router.get("/movies", MoviesByName);
+router.get("/movies", authMiddleware.isAuthenticated, MoviesByName);
 
 /**
  * DELETE /movies/:id - Delete a movie by ID
