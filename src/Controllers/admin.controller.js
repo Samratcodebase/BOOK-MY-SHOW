@@ -12,11 +12,15 @@ const updateUser = async (req, res) => {
       data: response,
     });
   } catch (error) {
-    res.status(Number(error && error.statuscode) || statusCode.INTERNAL_SERVER_ERROR).json({
-      message: error.message,
-      success:
-        typeof error && error.success == "boolen" ? error.success : false,
-    });
+    res
+      .status(
+        Number(error && error.statuscode) || statusCode.INTERNAL_SERVER_ERROR,
+      )
+      .json({
+        message: error.message,
+        success:
+          typeof error && error.success == "boolen" ? error.success : false,
+      });
   }
 };
 

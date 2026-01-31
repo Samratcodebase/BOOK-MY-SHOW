@@ -85,6 +85,7 @@ const isAuthenticated = (req, res, next) => {
 
     // Verify token signature and decode payload using JWT_SECRET
     const response = jwt.verify(token, process.env.JWT_SECRET);
+    console.log(response);
 
     // Attach decoded user data to request object for use in controllers
     req.user = response;
