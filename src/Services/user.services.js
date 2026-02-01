@@ -118,5 +118,28 @@ const passwordReset = async (oldpassword, newpassword, id) => {
   return { success: true };
 };
 
+const addBookingToUser = async (userID, bookingID) => {
+  try {
+    console.log("InsIDE uSE sERVICE");
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userID,
+      { $addToSet: { bookings: bookingID } }, // no duplicates
+      { new: true },
+    );
+
+    if (!updatedUser) {
+      const err = new Error("User not found");
+      err.statusCode = 404;
+      throw err;
+    }
+
+    return updatedUser;
+  } catch (error) {
+    console.error("Failed to add booking to user:", error);
+    throw error; // never swallow
+  }
+};
+
 // Export user service functions
-export default { createUser, loginUser, passwordReset };
+export default { createUser, loginUser, passwordReset, addBookingToUser };

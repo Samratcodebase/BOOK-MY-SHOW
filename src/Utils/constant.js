@@ -17,9 +17,9 @@ const statusCode = Object.freeze({
 });
 
 const bookingStatus = Object.freeze({
-  IN_PROCESS: "In_Process",
-  CANCELED: "Cancled",
-  SUCCESSFULL: "Sucessfull",
+  IN_PROCESS: "IN_PROCESS",
+  CANCELED: "CANCELED",
+  SUCCESSFUL: "SUCCESSFUL",
 });
 
 const paymentStatus = Object.freeze({
