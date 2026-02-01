@@ -46,6 +46,12 @@ const UserSchema = new mongoose.Schema(
       required: true,
       default: "APPOVED",
     },
+    bookings: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Booking",
+      },
+    ],
   },
   { timestamps: true }, // Auto-adds createdAt and updatedAt fields
 );
@@ -62,7 +68,7 @@ UserSchema.pre("save", async function () {
   // Generate salt for hashing
   const salt = await bcrypt.genSalt(10);
   // Hash password with salt and store
-  this.password = bcrypt.hash(this.password, salt);
+  this.password = await bcrypt.hash(this.password, salt);
 });
 
 /**

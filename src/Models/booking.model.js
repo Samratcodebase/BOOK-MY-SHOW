@@ -32,16 +32,14 @@ const bookingSchema = new mongoose.Schema(
     status: {
       type: String,
       required: true,
-      enum: {
-        values: Object.values(bookingStatus),
-        message: "Invalid Booking Status",
-      },
+      enum: Object.values(bookingStatus),
+
       default: bookingStatus.IN_PROCESS,
     },
   },
   { timestamps: true },
 );
 
-const BookingModel = mongoose.model("Bookings", bookingSchema);
+const BookingModel = mongoose.model("Booking", bookingSchema);
 
 export default BookingModel;

@@ -1,13 +1,15 @@
 import Booking from "../Models/booking.model.js";
-const createBooking = async (payload) => {
- 
-     
-  const response = await Booking.create({payload});
-  if(!response){
-    
-  }
-     
+import { statusCode } from "../Utils/constant.js";
+const CreateBooking = async (payload) => {
+  try {
+    return await Booking.create(payload);
+  } catch (err) {
+    console.error("Booking creation failed:", err);
 
+    err.statusCode = 400;
+    err.success = false;
+    throw err;
+  }
 };
 
-export default createBooking;
+export default { CreateBooking };
