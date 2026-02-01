@@ -251,7 +251,16 @@ const getMoviesInTheatre = async (theatreID, movieID) => {
   // Return the theatre with the specific movie
   return result[0];
 };
+const getTheatreByID = async (id) => {
+  const theatre = await Theatre.findById(id);
+  if (!theatre) {
+    const error = new Error("Theatre not found");
+    error.statusCode = statusCode.NOT_FOUND;
+    throw error;
+  }
 
+  return true;
+};
 // Export all theatre service functions
 export default {
   createTheatre,
@@ -260,4 +269,5 @@ export default {
   TheatreMoviesService,
   updateTheatre,
   getMoviesInTheatre,
+  getTheatreByID,
 };

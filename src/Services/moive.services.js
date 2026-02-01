@@ -88,7 +88,7 @@ const updateMovie = async (movieID, data) => {
 
   // Filter data to only include allowed fields
   const updatePayload = Object.fromEntries(
-    Object.entries(data).filter(([key]) => allowedFields.includes(key))
+    Object.entries(data).filter(([key]) => allowedFields.includes(key)),
   );
 
   // Throw error if no valid fields to update
@@ -163,6 +163,21 @@ const getMoviesByName = async (movieName) => {
   // Return array of matching movies
   return movies;
 };
+const getMovieByID = async (id) => {
+  const movie = await Movie.findById(id);
+  if (!movie) {
+    const error = new Error("Movie not found");
+    error.statusCode = statusCode.NOT_FOUND;
+    throw error;
+  }
 
+  return true;
+};
 // Export all movie service functions
-export default { createMovie, updateMovie, deleteMovieById, getMoviesByName };
+export default {
+  createMovie,
+  updateMovie,
+  deleteMovieById,
+  getMoviesByName,
+  getMovieByID,
+};

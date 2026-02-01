@@ -103,10 +103,12 @@ const getTheatres = async (req, res) => {
     });
   } catch (error) {
     // Return error response with status code from error or default 500
-    return res.status(error.statusCode || statusCode.INTERNAL_SERVER_ERROR).json({
-      success: false,
-      message: error.message,
-    });
+    return res
+      .status(error.statusCode || statusCode.INTERNAL_SERVER_ERROR)
+      .json({
+        success: false,
+        message: error.message,
+      });
   }
 };
 
