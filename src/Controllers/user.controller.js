@@ -29,7 +29,8 @@ const signUp = async (req, res) => {
     });
   } catch (error) {
     // Extract status code from error object, default to 500 if not present
-    const code = Number(error && error.statusCode) || statusCode.INTERNAL_SERVER_ERROR;
+    const code =
+      Number(error && error.statusCode) || statusCode.INTERNAL_SERVER_ERROR;
     // Extract success flag from error object, default to false if not boolean
     const success =
       typeof (error && error.success) === "boolean" ? error.success : false;
@@ -111,19 +112,25 @@ const PasswordReset = async (req, res) => {
     const token = req.cookies.jwt;
 
     if (!token) {
-      return res.status(statusCode.UNAUTHORISED).json({ message: "Authentication required" });
+      return res
+        .status(statusCode.UNAUTHORISED)
+        .json({ message: "Authentication required" });
     }
 
     let decoded;
     try {
       decoded = jwt.verify(token, process.env.JWT_SECRET);
     } catch {
-      return res.status(statusCode.UNAUTHORISED).json({ message: "Invalid or expired token" });
+      return res
+        .status(statusCode.UNAUTHORISED)
+        .json({ message: "Invalid or expired token" });
     }
 
     const userId = decoded.id || decoded.userId;
     if (!userId) {
-      return res.status(statusCode.UNAUTHORISED).json({ message: "Invalid token payload" });
+      return res
+        .status(statusCode.UNAUTHORISED)
+        .json({ message: "Invalid token payload" });
     }
 
     await userService.passRest(oldpassword, newpassword, userId);
@@ -135,12 +142,35 @@ const PasswordReset = async (req, res) => {
       message: "Password reset successful. Please login again.",
     });
   } catch (error) {
-    return res.status(error.statusCode || statusCode.INTERNAL_SERVER_ERROR).json({
-      message: error.message || "Internal Server Error",
-      success: false,
-    });
+    return res
+      .status(error.statusCode || statusCode.INTERNAL_SERVER_ERROR)
+      .json({
+        message: error.message || "Internal Server Error",
+        success: false,
+      });
   }
 };
 
+const profile = async (req, res) => {
+  try {
+    const response = await userService.getprofile(req.user.id);
+
+    return res.status(statusCode.OK).json({
+      message: "User Fetch SuccessFull",
+      data: response,
+    });
+  } catch (error) {
+    const statuscode =
+      Number(error && error.statusCode) || statusCode.INTERNAL_SERVER_ERROR;
+    // Extract success flag from error object, default to false if not boolean
+    const success =
+      typeof (error && error.success) === "boolean" ? error.success : false;
+    // Return error response with appropriate status code and message
+    return res.status(statuscode).json({
+      Message: error && error.message ? error.message : "Internal Server Error",
+      Success: success,
+    });
+  }
+};
 // Export user controller functions
-export default { signUp, singIn, logOut, PasswordReset };
+export default { signUp, singIn, logOut, PasswordReset, profile };

@@ -62,6 +62,7 @@ app.use("/api/v1/mba", MoiveBookingRouter);
 app.use("/api/v1/mba", TheatreRouter);
 // User authentication endpoints - signup and login
 app.use("/api/v1/auth", UserRouter);
+app.use("/api/v1/user", UserRouter);
 app.use("/api/v1/admin", AdminRouter);
 app.use("/api/v1/booking", BookingRouter);
 // Export configured Express application
