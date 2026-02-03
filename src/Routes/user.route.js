@@ -5,6 +5,7 @@
 
 import userController from "../Controllers/user.controller.js";
 import express from "express";
+import authMiddleware from "../Middleware/auth.middleware.js";
 
 // Initialize Express router
 const router = express.Router();
@@ -34,6 +35,7 @@ router.get("/login", userController.singIn);
  * Remove the JWT from Client Side
  * Controller: userController.logout
  */
+router.get("/profile", authMiddleware.isAuthenticated, userController.profile);
 
 router.get("/logout", userController.logOut);
 router.post("/resetpassword", userController.PasswordReset);

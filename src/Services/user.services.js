@@ -140,6 +140,30 @@ const addBookingToUser = async (userID, bookingID) => {
     throw error; // never swallow
   }
 };
+const getprofile = async (id) => {
+  const user = await User.findById(id).populate({
+    path: "bookings",
+    populate: [
+      { path: "theatreID", select: "name city" },
+      { path: "movieID", select: "movieName language" },
+    ],
+  });
+
+  if (!user) {
+    const error = new Error("user Not Found");
+    error.statusCode = statusCode.NOT_FOUND;
+    error.success = false;
+    throw error;
+  }
+
+  return user;
+};
 
 // Export user service functions
-export default { createUser, loginUser, passwordReset, addBookingToUser };
+export default {
+  createUser,
+  loginUser,
+  passwordReset,
+  addBookingToUser,
+  getprofile,
+};
