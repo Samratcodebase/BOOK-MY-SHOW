@@ -619,9 +619,3 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email samrat@example.com or create an issue in the repository.
-
----
-
-**Note:** This API is designed for a movie booking application frontend. Make sure to handle CORS properly in your frontend application.</content>
-<parameter name="filePath">c:\Users\srsam\OneDrive\Documents\Projects\BOOK-MY-SHOW\README.md
