@@ -11,4 +11,6 @@ router.patch(
   adminController.updateUser,
 );
 
+
+router.post("/shows",adminController.createShows);
 export default router;

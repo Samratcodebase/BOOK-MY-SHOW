@@ -65,5 +65,6 @@ app.use("/api/v1/auth", UserRouter);
 app.use("/api/v1/user", UserRouter);
 app.use("/api/v1/admin", AdminRouter);
 app.use("/api/v1/booking", BookingRouter);
+
 // Export configured Express application
 export default app;

@@ -144,7 +144,7 @@ const getprofile = async (id) => {
   const user = await User.findById(id).populate({
     path: "bookings",
     populate: [
-      { path: "theatreID", select: "name city" },
+      { path: "theatreID", select: "name city address" },
       { path: "movieID", select: "movieName language" },
     ],
   });
@@ -155,7 +155,6 @@ const getprofile = async (id) => {
     error.success = false;
     throw error;
   }
-
   return user;
 };
 
