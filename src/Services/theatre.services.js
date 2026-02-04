@@ -4,7 +4,7 @@
 // This module handles all theatre-related business logic including CRUD operations and movie management
 
 import Theatre from "../Models/theatre.model.js";
-import Show from "../Models/show.model.js"
+import Show from "../Models/show.model.js";
 import mongoose from "mongoose";
 import { statusCode } from "../Utils/constant.js";
 
@@ -87,11 +87,13 @@ const FetchTheatre = async (query) => {
   return theatres;
 };
 
-const FetchShowOFTheatre=async(id)=>{
-   const show= 
+const FetchShowOFTheatre = async (id) => {
+  const show = await Show.findOne({ theatreID: id });
 
-  
-}
+  console.log("This is show",show);
+
+
+};
 /**
  * THEATRE MOVIES SERVICE
  * Updates movies in a theatre (add or remove)
@@ -276,4 +278,5 @@ export default {
   updateTheatre,
   getMoviesInTheatre,
   getTheatreByID,
+  FetchShowOFTheatre
 };
