@@ -589,7 +589,7 @@ x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 Run the test suite:
 ```bash
-npm test
+npm run dev
 ```
 
 ## 📦 Deployment
