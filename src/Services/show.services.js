@@ -23,4 +23,7 @@ const getShow = async (payload) => {
   return show;
 };
 
+//Need to Implement the Thearte Sync
+//getThratre to Shows
+
 export default { getShow };
