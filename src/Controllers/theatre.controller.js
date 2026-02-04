@@ -95,10 +95,6 @@ const getTheatres = async (req, res) => {
 
     // Call service to fetch theatres matching query
     const data = await theatreService.FetchTheatre(query);
-    const theatreID="69666b515117de07b4d4226f"
-    
-    const show = await theatreService.FetchShowOFTheatre(theatreID);
-
     // Return 200 OK with theatres data
     return res.status(statusCode.OK).json({
       success: true,
