@@ -86,14 +86,6 @@ const FetchTheatre = async (query) => {
   // Return array of theatres with populated movies
   return theatres;
 };
-
-const FetchShowOFTheatre = async (id) => {
-  const show = await Show.findOne({ theatreID: id });
-
-  console.log("This is show",show);
-
-
-};
 /**
  * THEATRE MOVIES SERVICE
  * Updates movies in a theatre (add or remove)
