@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
-import paymentStatus from "../Utils/constant.js";
+
+import PAYMENT_STATUS from "../Utils/constant.js";
+
 const paymentSchema = new mongoose.Schema(
   {
-    bookingID: {
-      type: mongoose.Types.Schema.ObjectId,
+    booking: {
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
-      ref: "Bookings",
+      ref: "Booking",
     },
     amount: {
       type: Number,
@@ -14,13 +16,20 @@ const paymentSchema = new mongoose.Schema(
     status: {
       type: String,
       required: true,
-      enum: Object.values(paymentStatus),
-      default: paymentStatus.PENDING,
+      enum: {
+        values: [
+          PAYMENT_STATUS.pending,
+          PAYMENT_STATUS.failed,
+          PAYMENT_STATUS.success,
+        ],
+        message: "Invalid payment status",
+      },
+      default: PAYMENT_STATUS.pending,
     },
   },
   { timestamps: true },
 );
 
-const PaymentModel = mongoose.model("Payment", paymentSchema);
+const payment = mongoose.model("Payment", paymentSchema);
 
-export default PaymentModel;
+module.exports = payment;
